@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component, Suspense} from 'react';
+import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Layout from './hoc/Layout'
+
+const Home = React.lazy(() => import ('./containers/Home/Home'));
+const Inscricoes = React.lazy(() => import ('./containers/Inscricoes/Inscricoes'));
+const Call4Papers = React.lazy(() => import ('./containers/Call4Papers/Call4Papers'));
+const Error404 = React.lazy(() => import ('./containers/Error/404'));
+
+const App = () => {
+    return (
+        <Layout>
+            <BrowserRouter basename="/">
+                <Switch>
+
+                    <Route
+                        exact
+                        path="/"
+                        component={() => <Suspense fallback={< Spinner />}><Home/></Suspense>}/>
+
+                    <Route
+                        exact
+                        path="/inscricoes"
+                        component={() => <Suspense fallback={< Spinner />}><Inscricoes/></Suspense>}/>
+
+                    <Route
+                        exact
+                        path="/inscricoes"
+                        component={() => <Suspense fallback={< Spinner />}><Call4Papers/></Suspense>}/>
+                    <Route
+                        path="/"
+                        component={() => <Suspense fallback={< Spinner />}><Error404/></Suspense>}/>
+
+                </Switch>
+            </BrowserRouter>
+        </Layout>
+    );
 }
 
 export default App;
