@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Button = (props) => {
+const Home = (props) => {
     return(
         <div></div>
     )
 }
 
-export default Button;
+export default Home;

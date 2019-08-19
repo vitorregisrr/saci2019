@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Button = (props) => {
+const Modal = (props) => {
     return(
         <div></div>
     )
 }
 
-export default Button;
+export default Modal;

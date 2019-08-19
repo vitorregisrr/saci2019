@@ -1,8 +1,13 @@
 import React, {Component, Suspense} from 'react';
 import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
 
-import Layout from './hoc/Layout'
+// Import HOCS
+import Layout from './hoc/Layout/Layout'
 
+// Import Components
+import Spinner from './components/UI/Spinner/Spinner';
+
+// Import Containers (Pages)
 const Home = React.lazy(() => import ('./containers/Home/Home'));
 const Inscricoes = React.lazy(() => import ('./containers/Inscricoes/Inscricoes'));
 const Call4Papers = React.lazy(() => import ('./containers/Call4Papers/Call4Papers'));

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Button = (props) => {
+const Call4Papers = (props) => {
     return(
         <div></div>
     )
 }
 
-export default Button;
+export default Call4Papers;

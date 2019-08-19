@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Button = (props) => {
+const Footer = (props) => {
     return(
         <div></div>
     )
 }
 
-export default Button;
+export default Footer;
