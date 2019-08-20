@@ -1,8 +1,11 @@
 import React from 'react';
+import HomeHero from 'components/Sections/HomeHero/HomeHero';
 
 const Home = (props) => {
     return(
-        <div></div>
+        <div>
+            <HomeHero></HomeHero>
+        </div>
     )
 }
 

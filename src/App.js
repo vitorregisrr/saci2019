@@ -1,5 +1,9 @@
-import React, {Component, Suspense} from 'react';
-import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
+import React, {Suspense} from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
+import {CSSTransition} from 'react-transition-group';
+
+import './App.scss';
+import 'assets/scss/util/__CSSTransitions.scss';
 
 // Import HOCS
 import Layout from './hoc/Layout/Layout'
@@ -14,32 +18,57 @@ const Call4Papers = React.lazy(() => import ('./containers/Call4Papers/Call4Pape
 const Error404 = React.lazy(() => import ('./containers/Error/404'));
 
 const App = () => {
+    const routes = [
+        {
+            path: '/',
+            name: 'Home',
+            Component: Home,
+            exact: true
+
+        }, {
+            path: '/inscricoes',
+            name: 'Inscricoes',
+            Component: Inscricoes,
+            exact: true
+
+        }, {
+            path: '/call4papers',
+            name: 'Call4Papers',
+            Component: Call4Papers,
+            exact: true
+
+        }, {
+            path: '/',
+            name: 'Error404',
+            Component: Error404,
+            exact: false
+        }
+    ];
+
     return (
-        <Layout>
-            <BrowserRouter basename="/">
-                <Switch>
 
-                    <Route
-                        exact
-                        path="/"
-                        component={() => <Suspense fallback={< Spinner />}><Home/></Suspense>}/>
+        <BrowserRouter basename="/">
+            <Layout>
+                {routes.map(({path, Component, name, exact}) => (
+                    <Route key={name} exact={exact} path={path}>
+                        {({match}) => (
+                            <CSSTransition
+                                in={match != null}
+                                timeout={300}
+                                classNames="CSSTransition--fade"
+                                unmountOnExit>
+                                <div className="page">
+                                    <Suspense fallback={< Spinner />}>
+                                        <Component/>
+                                    </Suspense>
+                                </div>
+                            </CSSTransition>
+                        )}
+                    </Route>
+                ))}
+            </Layout>
+        </BrowserRouter>
 
-                    <Route
-                        exact
-                        path="/inscricoes"
-                        component={() => <Suspense fallback={< Spinner />}><Inscricoes/></Suspense>}/>
-
-                    <Route
-                        exact
-                        path="/inscricoes"
-                        component={() => <Suspense fallback={< Spinner />}><Call4Papers/></Suspense>}/>
-                    <Route
-                        path="/"
-                        component={() => <Suspense fallback={< Spinner />}><Error404/></Suspense>}/>
-
-                </Switch>
-            </BrowserRouter>
-        </Layout>
     );
 }
 
