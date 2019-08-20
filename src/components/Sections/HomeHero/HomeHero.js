@@ -19,7 +19,7 @@ const HomeHero = (props) => {
                         <div className="HomeHero__shapes__item triangle">
                             <h4 className="text">Oficinas,<br aria-hidden="true"/>
                                 Palestras,<br aria-hidden="true"/>
-                                Coffe Break
+                                Coffee Break
                                 <br aria-hidden="true"/>
                                 <strong>E +</strong>
                             </h4>
@@ -41,7 +41,7 @@ const HomeHero = (props) => {
                     <ReactWOW animation='fadeInUp'>
                         <div className="HomeHero__shapes__item circle">
                             <h5 class="title">
-                                SACI IFsul Câmpus Bagé
+                                SACI IFsul Campus Bagé
                             </h5>
                             <h4 className="subtitle">
                                 Semana acadêmica do curso Técnico em Informática
