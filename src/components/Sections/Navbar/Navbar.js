@@ -11,7 +11,7 @@ const Navbar = (props) => {
     
     const watchSticky = () => {
         function handleScroll() {
-            if (window.scrollY > 80) {
+            if (window.scrollY > 60) {
                 if(isSticky === false){
                     setSticky(true);
                 }

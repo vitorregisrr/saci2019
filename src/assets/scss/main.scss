@@ -20,7 +20,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: $color-dark;
     height: 200vh;
-    padding-top: 80px;
+    padding-top: 130px;
+
+    @media screen and (max-width: $bp-MD){
+        padding-top: 110px;
+    }
 }
 
 html{

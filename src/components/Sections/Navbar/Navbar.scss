@@ -16,13 +16,13 @@
     top: 0;
     left: 0;
     width: 100vw;
-    padding: 20px 0 15px;
+    padding: 5px 0 0;
     z-index: 9;
     background-color: transparent;
     @include transition();
 
     @media screen and (min-width: 1150px) {
-        padding: 25px 80px;
+        padding: 5px 80px;
     }
 
     &__content {
@@ -53,11 +53,12 @@
     }
 
     &__brand {
-        width: 170px;
+        width: 120px;
         object-fit: contain;
+        @include transition();
 
         @media screen and (max-width: $bp-MD){
-            width: 120px;
+            width: 90px;
         }
     }
 
@@ -69,7 +70,7 @@
 
         @media screen and (max-width: $bp-LG) {
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             left: 0;
             flex-direction: column;
             width: 100vw;
@@ -129,18 +130,18 @@
     }
 
     &.sticky {
-        padding: 10px 0;
+        padding: 2px 0;
         background-color: $color-dark;
         box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.08);
         animation-name: setSticky;
         animation-duration: 0.6s;
 
         @media screen and (max-width: $bp-MD){
-            padding: 16px 0;
+            padding: 0;
         }
 
         .Navbar__brand {
-            width: 120px;
+            width: 70px;
         }
 
         .Navbar__links {
