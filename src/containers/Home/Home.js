@@ -11,7 +11,7 @@ const Home = (props) => {
                 <HomeHero></HomeHero>
             </Element>
 
-            <Element name="section-about" className="element">
+            <Element name="section-sobre" className="element">
                 <About></About>
             </Element>
         </div>

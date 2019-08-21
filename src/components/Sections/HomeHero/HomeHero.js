@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React  from 'react';
 import ReactWOW from 'react-wow';
 
 import './HomeHero.scss';
@@ -57,7 +57,6 @@ const HomeHero = (props) => {
                 </div>
 
             </div>
-
         </section>
     )
 }

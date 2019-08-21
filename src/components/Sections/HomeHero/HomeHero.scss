@@ -3,6 +3,23 @@
 .HomeHero {
     position: relative;
     margin-top: -70px;
+    margin-bottom: 310px;
+
+    @media screen and (max-width: $bp-LG) {
+        margin-bottom: 390px;
+    }
+
+    @media screen and (max-width: $bp-MD) {
+        margin-bottom: 250px;
+    }
+
+    @media screen and (max-width: $bp-SM) {
+        margin-bottom: 120px;
+    }
+
+    @media screen and (max-width: 360px) {
+        margin-bottom: 60px;
+    }
 
     &__bg {
         position: absolute;
@@ -35,7 +52,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
         @media screen and (max-width: $bp-MD) {
             margin-top: -50px;
         }
@@ -46,16 +62,14 @@
         width: 690px;
         height: 690px;
         padding-top: 80px;
-
-        @media screen and (max-width: $bp-LG){
+        @media screen and (max-width: $bp-LG) {
             width: 600px;
             height: 600px;
         }
-
-        @media screen and (max-width: $bp-MD){
+        @media screen and (max-width: $bp-MD) {
             padding-top: 140px;
         }
-        
+
         &__item {
             position: absolute;
             display: flex;
@@ -79,7 +93,6 @@
                     font-size: 20px;
                     color: #fff;
                 }
-
                 @media screen and (max-width: $bp-LG) {
                     left: -140px;
                     width: 340px;
@@ -89,28 +102,24 @@
                         font-size: 18px;
                     }
                 }
-
-                @media screen and (max-width: $bp-LG){
+                @media screen and (max-width: $bp-LG) {
                     top: 50px;
                 }
-
-                @media screen and (max-width: $bp-MD){
+                @media screen and (max-width: $bp-MD) {
                     left: -100px;
                     top: 110px;
                     width: 280px;
                     height: 260px;
 
-                    .text{
+                    .text {
                         font-size: 17px;
                     }
                 }
-
-                @media screen and (max-width: $bp-SM){
+                @media screen and (max-width: $bp-SM) {
                     left: -50px;
                     top: 50px;
                 }
-
-                @media screen and (max-width: 360px){
+                @media screen and (max-width: 360px) {
                     transform: scale(.8);
                 }
             }
@@ -135,76 +144,65 @@
                     text-transform: uppercase;
                     text-align: center;
                     margin-bottom: 15px;
-
-                    @media screen and (max-width: $bp-LG){
+                    @media screen and (max-width: $bp-LG) {
                         font-size: 14px;
                     }
-
-                    @media screen and (max-width: $bp-MD){
+                    @media screen and (max-width: $bp-MD) {
                         font-size: 12px;
                     }
                 }
 
-                .subtitle{
+                .subtitle {
                     font-weight: 600;
                     color: #fff;
                     font-size: 22px;
                     letter-spacing: 0;
                     line-height: 1.3;
                     margin: 0;
-
-                    @media screen and (max-width: $bp-LG){
+                    @media screen and (max-width: $bp-LG) {
                         font-size: 19px;
                     }
-
-                    @media screen and (max-width: $bp-MD){
+                    @media screen and (max-width: $bp-MD) {
                         font-size: 16px;
                     }
                 }
 
-                .desc{
+                .desc {
                     margin-top: 5px;
                     font-weight: lighter;
                     font-size: 14px;
                     color: #fff;
-
-                    @media screen and (max-width: $bp-LG){
+                    @media screen and (max-width: $bp-LG) {
                         font-size: 12px;
                     }
-
-                    @media screen and (max-width: $bp-MD){
+                    @media screen and (max-width: $bp-MD) {
                         font-size: 10px;
                     }
                 }
-
                 @media screen and (max-width: $bp-LG) {
                     width: 560px;
                     height: 550px;
 
-                    .text{
+                    .text {
                         font-size: 19px;
                     }
                 }
-
-                @media screen and (max-width: $bp-MD){
+                @media screen and (max-width: $bp-MD) {
                     width: 480px;
                     height: 480px;
                 }
-                
-                @media screen and (max-width: $bp-SM){
+                @media screen and (max-width: $bp-SM) {
                     padding: 28%;
                     height: 420px;
                     width: 420px;
                     bottom: -160px;
                     left: 70px;
                 }
-                
-                @media screen and (max-width: 410px){
+                @media screen and (max-width: 410px) {
                     padding: 35%;
                     left: -10px;
                 }
-                
-                @media screen and (max-width: 360px){
+                @media screen and (max-width: 360px) {
                     padding: 38%;
                     transform: scale(.8);
                     left: -25px;
@@ -235,33 +233,29 @@
                         letter-spacing: 10px;
                     }
                 }
-
-                @media screen and (max-width: $bp-SM){
+                @media screen and (max-width: $bp-SM) {
                     width: 380px;
                     height: 380px;
                     left: 50%;
                     transform: translatex(-50%);
 
-                    .text{
+                    .text {
                         font-size: 12px;
                         letter-spacing: 1;
                         margin-bottom: 40px;
                         padding-right: 20px;
 
-                        span{
+                        span {
                             font-size: 32px;
                         }
-
-                        @media screen and (max-width: $bp-MD){
+                        @media screen and (max-width: $bp-MD) {
                             padding-right: 0;
                         }
                     }
                 }
-
-                @media screen and (max-width: 360px){
+                @media screen and (max-width: 360px) {
                     transform: translateX(-50%) scale(.8);
                 }
-
 
                 .scroll-down {
                     position: absolute;
@@ -271,7 +265,6 @@
                     font-weight: lighter;
                     color: #fff;
                     text-transform: uppercase;
-
                     @media screen and (max-width: $bp-MD) {
                         left: 50%;
                         transform: translateX(-50%);

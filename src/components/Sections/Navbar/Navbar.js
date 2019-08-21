@@ -60,6 +60,7 @@ const Navbar = (props) => {
                             activeClass="active" 
                             spy={true} smooth={true} 
                             to="section-sobre" 
+                            offset={-120}
                             className="Navbar__links__item">
                                 Sobre
                             </ScrollLink>
