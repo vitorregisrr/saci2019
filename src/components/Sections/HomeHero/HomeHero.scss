@@ -251,6 +251,10 @@
                         span{
                             font-size: 32px;
                         }
+
+                        @media screen and (max-width: $bp-MD){
+                            padding-right: 0;
+                        }
                     }
                 }
 
