@@ -58,7 +58,7 @@ const App = () => {
                                 classNames="CSSTransition--fade"
                                 unmountOnExit>
                                 <div className="page">
-                                    <Suspense fallback={< Spinner />}>
+                                    <Suspense fallback={< Spinner fullscreen/>}>
                                         <Component/>
                                     </Suspense>
                                 </div>

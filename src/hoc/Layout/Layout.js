@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ReactWOW from 'react-wow';
 
 import Navbar from '../../components/Sections/Navbar/Navbar';

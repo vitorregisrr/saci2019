@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactWOW from 'react-wow';
 import {NavLink, Link} from 'react-router-dom';
+import { Link as ScrollLink } from "react-scroll";
 
 import saciBrand from 'assets/images/brands/saci2019.png';
 import './Navbar.scss';
@@ -43,25 +44,40 @@ const Navbar = (props) => {
 
                     <ul className={`Navbar__links ${isNavToggled ? 'active' : ''}`} aria-hidden={!isNavToggled} onClick={() => toggleNav(false)}>
                         <li key="home">
-                            <NavLink exact to="/" className="Navbar__links__item">
+                            <ScrollLink 
+                            activeClass="active"
+                            spy={true}
+                            smooth={true}
+                            offset={-80}
+                            to="section-home"
+                            className="Navbar__links__item">
                                 Home
-                            </NavLink>
+                            </ScrollLink>
                         </li>
 
                         <li key="sobre">
-                            <NavLink exact to="/sobre" className="Navbar__links__item">
+                            <ScrollLink 
+                            activeClass="active" 
+                            spy={true} smooth={true} 
+                            to="section-sobre" 
+                            className="Navbar__links__item">
                                 Sobre
-                            </NavLink>
+                            </ScrollLink>
                         </li>
 
                         <li key="cronograma">
-                            <NavLink exact to="/cronograma" className="Navbar__links__item">
+                            <ScrollLink 
+                            activeClass="active" 
+                            spy={true} 
+                            smooth={true}
+                            to="section-cronograma" 
+                            className="Navbar__links__item">
                                 Cronograma
-                            </NavLink>
+                            </ScrollLink>
                         </li>
 
                         <li key="patrons">
-                            <NavLink exact to="/patrocinadores" className="Navbar__links__item">
+                            <NavLink exact to="section-patrons" className="Navbar__links__item">
                                 Patrons
                             </NavLink>
                         </li>

@@ -96,6 +96,7 @@
             padding: 10px 20px;
             display: inline-block;
             text-decoration: none;
+            cursor: pointer;
             @include transition();
 
             &.active:not(.inscricoes),

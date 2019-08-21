@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {useState}  from 'react';
 import ReactWOW from 'react-wow';
 
 import './HomeHero.scss';
 import homeHeroBg from 'assets/images/backgrounds/home-hero.png';
+import Spinner from 'components/UI/Spinner/Spinner';
+
 
 const HomeHero = (props) => {
+    const [isLoading, setLoading] = useState(true);
     return (
         <section className="HomeHero">
-
+            { isLoading ? <Spinner style={ {'min-height': '100vh'} } /> : ''}
             <div className="HomeHero__bg">
-                <img src={homeHeroBg} alt="Astronautas da Nasa em background azul"/>
+                <img 
+                src={homeHeroBg} 
+                alt="Astronautas da Nasa em background azul"
+                onLoad={() => setLoading(false)}/>
             </div>
 
             <div className="HomeHero__content container">
@@ -40,13 +46,13 @@ const HomeHero = (props) => {
 
                     <ReactWOW animation='fadeInUp'>
                         <div className="HomeHero__shapes__item circle">
-                            <h5 class="title">
+                            <h5 className="title">
                                 SACI IFsul Campus Bagé
                             </h5>
                             <h4 className="subtitle">
                                 Semana acadêmica do curso Técnico em Informática
                             </h4>
-                            <p class="desc">
+                            <p className="desc">
                                 Av. Leonel de Moura Brizola, 250 1 - Bairro Pedra Branca Bagé/RS
                             </p>
                         </div>
