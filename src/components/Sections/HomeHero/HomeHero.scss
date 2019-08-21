@@ -1,5 +1,7 @@
 @import 'assets/scss/variables/__all.scss';
 
+$shapes-color: 'red';
+
 .HomeHero {
     position: relative;
     margin-top: -70px;
@@ -81,7 +83,7 @@
             background-attachment: scroll;
 
             &.triangle {
-                background-image: url("../../../assets/images/shapes/triangle-pink.png");
+                background-image: url("../../../assets/images/shapes/triangle-"+$shapes-color+".png");
                 z-index: 3;
                 width: 390px;
                 height: 350px;
@@ -127,7 +129,7 @@
             &.circle {
                 padding: 30%;
                 flex-direction: column;
-                background-image: url("../../../assets/images/shapes/circle-pink.png");
+                background-image: url("../../../assets/images/shapes/circle-"+$shapes-color+".png");
                 width: 660px;
                 height: 600px;
                 right: -240px;

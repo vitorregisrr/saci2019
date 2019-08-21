@@ -71,7 +71,7 @@ const Navbar = (props) => {
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
-                                        offset={-80}
+                                        offset={-130}
                                         to="section-home"
                                         className="Navbar__links__item">
                                         Home
@@ -80,7 +80,7 @@ const Navbar = (props) => {
                                     exact 
                                     to="/" 
                                     className="Navbar__links__item"
-                                    onClick={() => scrollAfterRoute('section-home')}>
+                                    onClick={() => scrollAfterRoute('section-home', -80)}>
                                     Home
                                 </Link>
                             }
@@ -92,7 +92,7 @@ const Navbar = (props) => {
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
-                                        offset={-80}
+                                        offset={-120}
                                         to="section-sobre"
                                         className="Navbar__links__item">
                                         Sobre

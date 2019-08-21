@@ -4,6 +4,7 @@ import { Element } from 'react-scroll';
 import HomeHero from 'components/Sections/HomeHero/HomeHero';
 import About from 'components/Sections/About/About';
 import Cronograma from 'components/Sections/Cronograma/Cronograma';
+import Patrons from 'components/Sections/Patrons/Patrons';
 
 const Home = (props) => {
     return (
@@ -16,12 +17,12 @@ const Home = (props) => {
                 <About></About>
             </Element>
 
-            <Element name="section-cronograma" className="element">
+            <Element name="section-cronograma" className="element"> 
                 <Cronograma></Cronograma>
             </Element>
 
             <Element name="section-patrons" className="element">
-                <Cronograma></Cronograma>
+                <Patrons></Patrons>
             </Element>
         </div>
     )

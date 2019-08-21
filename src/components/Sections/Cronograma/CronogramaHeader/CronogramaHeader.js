@@ -1,9 +1,24 @@
 import React from 'react';
-import {Link, Element} from 'react-scroll';
+import {Link} from 'react-scroll';
 
 import './CronogramaHeader.scss';
 
-const CronogramaHeader = () => {
+const CronogramaHeader = (props) => {
+
+    const headerAnchors = [];
+    {
+        for (let x = 1; x <= props.numeroDias; x++) {
+            headerAnchors.push(
+                <Link
+                    activeClass="active"
+                    smooth={true}
+                    to={`cronograma-dia-${x}`}
+                    offset={-30}
+                    className="Cronograma__header__anchors__item">Dia {x}</Link>
+            )
+        }
+    }
+
     return (
         <header className="Cronograma__header">
             <h4 className="Cronograma__header__subtitle">
@@ -14,26 +29,7 @@ const CronogramaHeader = () => {
             </h3>
             <div className="Cronograma__header__anchors">
                 <label>Pular para:</label>
-                <Link
-                    activeClass="active"
-                    smooth={true}
-                    to="cronograma-dia-1"
-                    offset={-30}
-                    className="Cronograma__header__anchors__item">Dia 1</Link>
-
-                <Link
-                    activeClass="active"
-                    smooth={true}
-                    to="cronograma-dia-2"
-                    offset={-30}
-                    className="Cronograma__header__anchors__item">Dia 2</Link>
-
-                <Link
-                    activeClass="active"
-                    smooth={true}
-                    to="cronograma-dia-3"
-                    offset={-30}
-                    className="Cronograma__header__anchors__item">Dia 3</Link>
+                {headerAnchors}
             </div>
         </header>
     )
