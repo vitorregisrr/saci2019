@@ -3,8 +3,6 @@ import ReactWOW from 'react-wow';
 
 import './HomeHero.scss';
 import homeHeroBg from 'assets/images/backgrounds/home-hero.png';
-import Spinner from 'components/UI/Spinner/Spinner';
-
 
 const HomeHero = (props) => {
     return (

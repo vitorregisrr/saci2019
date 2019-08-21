@@ -9,7 +9,10 @@ const Footer = (props) => {
             <div className="container">
                 <div className="Footer__copyright">
                     <span>powered with &lt;3 by</span>
-                    <a href="https://evolveme.com.br" target="_blank">
+                    <a 
+                        href="https://evolveme.com.br" 
+                        target="_blank"
+                        rel="noopener noreferrer" >
                         <img src={evolveBrand} alt="Logo Evolve Studio"/>
                     </a>
                 </div>
