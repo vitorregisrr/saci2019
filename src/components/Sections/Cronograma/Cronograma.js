@@ -74,7 +74,7 @@ const Cronograma = (props) => {
                     numeroDias={cronograma.length}/> 
                 
                 {cronograma.map((dia, i) => (
-                    <Element className="Cronograma__dia__wrapper" name={`cronograma-dia-${i}`} key={`cronograma-dia-${i+1}`}>
+                    <Element className="Cronograma__dia__wrapper" name={`cronograma-dia-${i+1}`} key={`cronograma-dia-${i+1}`}>
                         <CronogramaDia atividades={dia.atividades} diaNumero={i+1}/>
                     </Element>
                 ))}

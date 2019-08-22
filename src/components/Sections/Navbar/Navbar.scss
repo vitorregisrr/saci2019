@@ -81,8 +81,10 @@
             background-color: $color-dark;
             padding-bottom: 60px;
             margin-top: -5px;
+            pointer-events: none;
             
             &.active{
+                pointer-events: all;
                 max-height: 200vh;
                 opacity: 1;
             }

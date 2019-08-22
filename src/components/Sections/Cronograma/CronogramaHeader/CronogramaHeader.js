@@ -14,7 +14,7 @@ const CronogramaHeader = (props) => {
                 smooth={true}
                 to={`cronograma-dia-${x}`}
                 key={`anchor-dia-${x}`}
-                offset={-30}
+                offset={-100}
                 className="Cronograma__header__anchors__item">Dia {x}</Link>
         )
     }
