@@ -64,7 +64,8 @@ const Navbar = (props) => {
                         ? 'active'
                         : ''}`}
                         aria-hidden={!isNavToggled}
-                        onClick={() => toggleNav(false)}>
+                        onMouseDown={() => setTimeout(() => toggleNav(false),100)}>
+                            
                         <li key="home">
                             {props.location.pathname === '/'
                                 ? <ScrollLink
