@@ -14,6 +14,10 @@
         align-items: center;
         margin-bottom: 30px;
 
+        @media screen and (max-width: $bp-MD){
+            margin-bottom: 12px;
+        }
+
         &__title {
             display: inline-block;
             font-size: 27px;
@@ -42,6 +46,10 @@
             @media screen and (max-width: $bp-MD){
                 font-size: 15px;
             }
+
+            @media screen and (max-width: $bp-MD){
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -66,7 +74,8 @@
                     width: 130px;
                 }
                 @media screen and (max-width: $bp-MD){
-                    width: 70px;
+                    margin: 0 8px;
+                    width: 90px;
                 }
             }
         }
