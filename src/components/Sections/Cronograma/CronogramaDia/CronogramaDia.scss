@@ -1,67 +1,67 @@
 @import 'assets/scss/variables/__all.scss';
 
-.Cronograma__dia{
-    
-    &__wrapper{
-        &:not(:last-child){
+.Cronograma__dia {
+
+    &__wrapper {
+        &:not(:last-child) {
             margin-bottom: 170px;
+            @media screen and (max-width: $bp-MD) {
+                margin-bottom: 100px;
+            }
         }
     }
-    
-    &__title{
+
+    &__title {
         display: flex;
         flex-direction: column;
         font-size: 40px;
         font-weight: 800;
         color: #fff;
         text-transform: uppercase;
-        padding-bottom: 70px;
-
-        @media screen and (max-width: $bp-MD){
+        padding-bottom: 60px;
+        @media screen and (max-width: $bp-MD) {
             font-size: 22px;
         }
 
-        span{
+        span {
             font-size: 15px;
             color: $color-secondary;
             font-weight: 400;
             margin-bottom: -10px;
-
-            @media screen and (max-width: $bp-MD){
+            @media screen and (max-width: $bp-MD) {
                 font-size: 10px;
                 margin-bottom: -4px;
             }
         }
 
-        hr{
+        hr {
             background-color: $color-secondary;
             border-color: $color-secondary;
             width: 50px;
             height: 3px;
             margin: 0;
-            @media screen and (max-width: $bp-MD){
-               width: 30px
+            @media screen and (max-width: $bp-MD) {
+                width: 30px;
             }
         }
     }
 
-    &__atividades{
+    &__atividades {
         border-left: 1px solid #fff;
         min-height: 40vh;
         padding-left: 50px;
-
-        @media screen and (max-width: $bp-MD){
+        @media screen and (max-width: $bp-MD) {
             padding-left: 20px;
         }
 
-        .coming-soon{
+        .coming-soon {
+            position: relative;
             color: rgba(255, 255, 255, 0.39);
             font-weight: 800;
             text-transform: uppercase;
             margin: 0;
             font-size: 30px;
-
-            @media screen and (max-width: $bp-MD){
+            @media screen and (max-width: $bp-MD) {
                 font-size: 20px;
             }
         }
