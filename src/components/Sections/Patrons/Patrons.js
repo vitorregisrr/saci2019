@@ -20,14 +20,6 @@ const Patrons = (props) => {
 
                 <div className="Patrons__list">
                     <a href="/" className="Patrons__list__item">
-                        <img src={brand_knn} alt="Logomarca KNN"/>
-                    </a>
-
-                    <a href="/" className="Patrons__list__item">
-                        <img src={brand_peruzzo} alt="Logomarca Peruzzo Supermercados"/>
-                    </a>
-
-                    <a href="/" className="Patrons__list__item">
                         <img src={brand_evolve} alt="Logomarca Evolve"/>
                     </a>
 
