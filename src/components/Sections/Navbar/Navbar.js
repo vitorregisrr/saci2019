@@ -113,6 +113,7 @@ const Navbar = (props) => {
                                         activeClass="active"
                                         spy={true}
                                         smooth={true}
+                                        offset={-40}
                                         to="section-cronograma"
                                         className="Navbar__links__item">
                                         Cronograma

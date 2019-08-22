@@ -6,17 +6,17 @@ import './CronogramaHeader.scss';
 const CronogramaHeader = (props) => {
 
     const headerAnchors = [];
-    {
-        for (let x = 1; x <= props.numeroDias; x++) {
-            headerAnchors.push(
-                <Link
-                    activeClass="active"
-                    smooth={true}
-                    to={`cronograma-dia-${x}`}
-                    offset={-30}
-                    className="Cronograma__header__anchors__item">Dia {x}</Link>
-            )
-        }
+    
+    for (let x = 1; x <= props.numeroDias; x++) {
+        headerAnchors.push(
+            <Link
+                activeClass="active"
+                smooth={true}
+                to={`cronograma-dia-${x}`}
+                key={`anchor-dia-${x}`}
+                offset={-30}
+                className="Cronograma__header__anchors__item">Dia {x}</Link>
+        )
     }
 
     return (

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SpeakerList = (props) => {
+const CronogramaItem = (props) => {
     return(
         <div></div>
     )
 }
 
-export default SpeakerList;
+export default CronogramaItem;

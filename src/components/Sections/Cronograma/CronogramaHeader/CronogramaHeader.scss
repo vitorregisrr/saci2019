@@ -2,8 +2,12 @@
 @import 'assets/scss/util/__animations.scss';
 
 .Cronograma__header{
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 
+    @media screen and (max-width: $bp-MD){
+        margin-bottom: 40px;
+    }
+    
     &__subtitle{
         font-size: 17px;
         color: $color-secondary;

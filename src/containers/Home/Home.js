@@ -18,7 +18,7 @@ const Home = (props) => {
             </Element>
 
             <Element name="section-cronograma" className="element"> 
-                <Cronograma></Cronograma>
+                <Cronograma insideHome={true}></Cronograma>
             </Element>
 
             <Element name="section-patrons" className="element">

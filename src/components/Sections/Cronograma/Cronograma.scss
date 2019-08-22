@@ -1,7 +1,13 @@
 @import 'assets/scss/variables/__breakpoints.scss';
 
 .Cronograma{
-    padding: 90px 0;
+    &.spaced{
+        padding: 90px 0;
+
+        @media screen and (max-width: $bp-MD){
+            padding: 40px 0;
+        }
+    }
 
     @media screen and (max-width: $bp-MD){
         padding: 50px 0;

@@ -6,16 +6,17 @@ import './App.scss';
 import 'assets/scss/util/__CSSTransitions.scss';
 
 // Import HOCS
-import Layout from './hoc/Layout/Layout'
+import Layout from 'hoc/Layout/Layout'
 
 // Import Components
-import Spinner from './components/UI/Spinner/Spinner';
+import Spinner from 'components/UI/Spinner/Spinner';
 
 // Import Containers (Pages)
-const Home = React.lazy(() => import ('./containers/Home/Home'));
-const Inscricoes = React.lazy(() => import ('./containers/Inscricoes/Inscricoes'));
-const Call4Papers = React.lazy(() => import ('./containers/Call4Papers/Call4Papers'));
-const Error404 = React.lazy(() => import ('./containers/Error/404'));
+const Home = React.lazy(() => import ('containers/Home/Home'));
+const Inscricoes = React.lazy(() => import ('containers/Inscricoes/Inscricoes'));
+const Call4Papers = React.lazy(() => import ('containers/Call4Papers/Call4Papers'));
+const Error404 = React.lazy(() => import ('containers/Error/404'));
+const Cronograma = React.lazy(() => import ('components/Sections/Cronograma/Cronograma'));
 
 const App = () => {
     const routes = [
@@ -23,6 +24,13 @@ const App = () => {
             path: '/',
             name: 'Home',
             Component: Home,
+            exact: true
+
+        },
+         {
+            path: '/cronograma',
+            name: 'Cronograma',
+            Component: Cronograma,
             exact: true
 
         }, {

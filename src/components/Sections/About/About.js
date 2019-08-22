@@ -12,6 +12,7 @@ const About = (props) => {
                         <h3 className="About__caption__title">
                             Sobre o evento
                         </h3>
+                        <hr />
                         <p className="About__caption__desc">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo dolorum,
                             accusamus accusantium, iure perspiciatis autem veniam provident minus similique
