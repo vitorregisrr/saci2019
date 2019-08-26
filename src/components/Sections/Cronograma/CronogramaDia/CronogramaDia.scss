@@ -5,6 +5,7 @@
     &__wrapper {
         &:not(:last-child) {
             margin-bottom: 170px;
+            
             @media screen and (max-width: $bp-MD) {
                 margin-bottom: 100px;
             }
@@ -19,6 +20,7 @@
         color: #fff;
         text-transform: uppercase;
         padding-bottom: 60px;
+
         @media screen and (max-width: $bp-MD) {
             font-size: 22px;
         }
@@ -28,6 +30,7 @@
             color: $color-secondary;
             font-weight: 400;
             margin-bottom: -10px;
+
             @media screen and (max-width: $bp-MD) {
                 font-size: 10px;
                 margin-bottom: -4px;
@@ -40,6 +43,7 @@
             width: 50px;
             height: 3px;
             margin: 0;
+            
             @media screen and (max-width: $bp-MD) {
                 width: 30px;
             }
@@ -50,6 +54,7 @@
         border-left: 1px solid #fff;
         min-height: 40vh;
         padding-left: 50px;
+
         @media screen and (max-width: $bp-MD) {
             padding-left: 20px;
         }
@@ -60,9 +65,10 @@
             font-weight: 800;
             text-transform: uppercase;
             margin: 0;
-            font-size: 30px;
+            font-size: 20px;
+
             @media screen and (max-width: $bp-MD) {
-                font-size: 20px;
+                font-size: 16px;
             }
         }
     }

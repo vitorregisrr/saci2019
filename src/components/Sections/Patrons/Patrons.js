@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './Patrons.scss';
-import brand_peruzzo from 'assets/images/brands/peruzzo.png';
 import brand_evolve from 'assets/images/brands/evolve.png';
 import brand_knn from 'assets/images/brands/knn.png';
 

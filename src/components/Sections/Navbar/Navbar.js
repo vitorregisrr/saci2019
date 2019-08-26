@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import ReactWOW from 'react-wow';
-import {NavLink, Link, withRouter} from 'react-router-dom';
-import {Link as ScrollLink, scroller} from "react-scroll";
+import {Link, withRouter} from 'react-router-dom';
 
 import saciBrand from 'assets/images/brands/saci2019.png';
 import './Navbar.scss';
+import NavbarItem from './NavbarItem/NavbarItem';
 
 const Navbar = (props) => {
     const [isSticky,
@@ -30,16 +30,46 @@ const Navbar = (props) => {
     };
     watchSticky();
 
-    const scrollAfterRoute = (name, offset) => {
-        setTimeout((name) => {
-            scroller.scrollTo(name, {
-                duration: 800,
-                smooth: true,
-                offset: offset || 0
-            });
-        }, 400, name)
-    };
+    const navItems = [
+        {
+            key: 'home',
+            label: 'Home',
+            insideHome: true,
+            scrollTo: 'section-home',
+            offset: -80
+        },
 
+        {
+            key: 'sobre',
+            label: 'Sobre',
+            insideHome: true,
+            scrollTo: 'section-sobre',
+            offset: -110
+        },
+
+        {
+            key: 'cronograma',
+            label: 'Cronograma',
+            insideHome: true,
+            scrollTo: 'section-cronograma',
+            offset: -10
+        },
+
+        {
+            key: 'patrons',
+            label: 'Patrons',
+            insideHome: true,
+            scrollTo: 'section-patrons'
+        },
+        
+        {
+            key: 'inscricoes',
+            label: 'Inscrições',
+            scrollTo: 'section-inscricoes',
+            routeTo: '/inscricoes',
+            offset: -150
+        }
+    ]
     return (
         <nav className={`Navbar ${isSticky
             ? 'sticky'
@@ -65,91 +95,11 @@ const Navbar = (props) => {
                         : ''}`}
                         aria-hidden={!isNavToggled}
                         onMouseDown={() => setTimeout(() => toggleNav(false),100)}>
-                            
-                        <li key="home">
-                            {props.location.pathname === '/'
-                                ? <ScrollLink
-                                        activeClass="active"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-130}
-                                        to="section-home"
-                                        className="Navbar__links__item">
-                                        Home
-                                    </ScrollLink>
-                                : <Link 
-                                    exact 
-                                    to="/" 
-                                    className="Navbar__links__item"
-                                    onClick={() => scrollAfterRoute('section-home', -80)}>
-                                    Home
-                                </Link>
-                            }
-                        </li>
-
-                        <li key="sobre">
-                        {props.location.pathname === '/'
-                                ? <ScrollLink
-                                        activeClass="active"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-120}
-                                        to="section-sobre"
-                                        className="Navbar__links__item">
-                                        Sobre
-                                    </ScrollLink>
-                                : <Link 
-                                    exact 
-                                    to="/" 
-                                    className="Navbar__links__item"
-                                    onClick={() => scrollAfterRoute('section-sobre', -100)}>
-                                    Sobre
-                                </Link>
-                            }
-                        </li>
-
-                        <li key="cronograma">
-                            {props.location.pathname === '/'
-                                ? <ScrollLink
-                                        activeClass="active"
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-40}
-                                        to="section-cronograma"
-                                        className="Navbar__links__item">
-                                        Cronograma
-                                    </ScrollLink>
-                                : <Link exact to="/cronograma" className="Navbar__links__item">
-                                    Cronograma
-                                </Link>
-                            }
-                        </li>
-
-                        <li key="patrons">
-                            {props.location.pathname === '/'
-                                ? <ScrollLink
-                                        activeClass="active"
-                                        spy={true}
-                                        smooth={true}
-                                        to="section-patrons"
-                                        className="Navbar__links__item">
-                                        Patrons
-                                    </ScrollLink>
-                                : <Link
-                                    to="/"
-                                    onClick={() => scrollAfterRoute('section-patrons')}
-                                    className="Navbar__links__item">
-                                    Patrons
-                                </Link>
-                            }
-                        </li>
-
-                        <li key="inscricoes">
-                            <NavLink exact to="/inscricoes" className="Navbar__links__item inscricoes">
-                                Inscrições
-                                <span aria-hidden="true">-></span>
-                            </NavLink>
-                        </li>
+                            { navItems.map( item => 
+                                <NavbarItem 
+                                    path={props.location.pathname}
+                                    {...item}/>
+                            )}
                     </ul>
                 </div>
             </ReactWOW>
