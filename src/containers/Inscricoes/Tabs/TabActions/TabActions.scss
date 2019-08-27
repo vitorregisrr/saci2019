@@ -1,0 +1,98 @@
+@import 'assets/scss/variables/__all.scss';
+@import 'assets/scss/util/__animations.scss';
+
+.Inscricoes__action {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px 45px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    background-color: rgba(43, 15, 95, 0.751);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.27);
+    color: #fff;
+    text-align: left;
+    @include transition();
+
+    @media screen and (max-width: $bp-MD){
+        padding: 35px 35px;
+    }
+    
+    &:hover {
+        @include scale(1.02);
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.287);
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        right: -30px;
+        width: 30%;
+        height: 4px;
+        background-color: $color-primary;
+        transform: rotate(-50deg);
+    }
+
+    &:after {
+        top: 95%;
+    }
+
+    &:before {
+        top: 110%;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        margin: 0 0 14px 0;
+
+        span.ico {
+            display: inline-block;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
+            margin-right: 4px;
+
+            @media screen and (max-width: $bp-MD){
+                width: 28px;
+                height: 28px;
+            }
+
+            &.pen {
+                background-image: url("../../../../assets/images/ico/pen.png");
+            }
+
+            &.eye {
+                margin-right: 8px;
+                background-image: url("../../../../assets/images/ico/eye.png");
+            }
+        }
+
+        @media screen and (max-width: $bp-MD) {
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+    }
+
+    &__desc {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0;
+
+        @media screen and (max-width: $bp-MD) {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+    }
+}

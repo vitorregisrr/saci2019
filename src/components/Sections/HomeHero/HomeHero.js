@@ -1,5 +1,6 @@
 import React  from 'react';
 import ReactWOW from 'react-wow';
+import {Link as ScrollLink} from 'react-scroll';
 
 import './HomeHero.scss';
 import homeHeroBg from 'assets/images/backgrounds/home-hero.png';
@@ -35,7 +36,7 @@ const HomeHero = (props) => {
                                 <span>espaço?</span>
                             </h2>
 
-                            <span className="scroll-down">Scroll Down</span>
+                            <ScrollLink to="section-sobre" offset={-115} smooth={true} className="scroll-down">Scroll Down</ScrollLink>
                         </div>
                     </ReactWOW>
 

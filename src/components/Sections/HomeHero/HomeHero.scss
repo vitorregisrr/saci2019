@@ -267,6 +267,10 @@ $shapes-color: 'red';
                     font-weight: lighter;
                     color: #fff;
                     text-transform: uppercase;
+                    text-decoration: none;
+                    z-index: 10;
+                    cursor: pointer;
+                    
                     @media screen and (max-width: $bp-MD) {
                         left: 50%;
                         transform: translateX(-50%);

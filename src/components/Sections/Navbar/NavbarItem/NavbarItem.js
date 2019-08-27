@@ -39,7 +39,7 @@ const NavbarItem = (props) => {
                     className={`Navbar__links__item ${props.routeTo === '/inscricoes'
                     ? 'inscricoes'
                     : ''}`}>
-                    {props.label}
+                    {props.label}{props.routeTo === '/inscricoes' ? <span>-></span> : ''}
                 </Link>
 }
         </li>

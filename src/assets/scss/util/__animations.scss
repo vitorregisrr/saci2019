@@ -80,7 +80,12 @@
 }
 
 .float{
-	animation: float 6s infinite;
+  animation: float 6s infinite;
+  
+  &--fast{
+    animation-duration: 4.6s;
+    animation-delay: 4.6s;
+  }
 }
 
 @keyframes float {

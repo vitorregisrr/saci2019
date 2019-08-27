@@ -1,6 +1,9 @@
 //Import Variables //
 @import './variables/__all';
 
+//Import Components //
+@import './components/__all';
+
 //Import Mixins //
 @import './mixins/__all';
 
@@ -20,7 +23,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: $color-dark;
     padding-top: 130px;
-    min-height: 120vh;
 
     @media screen and (max-width: $bp-MD){
         padding-top: 110px;

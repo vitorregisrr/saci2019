@@ -1,7 +1,9 @@
 import React, {useState, Suspense} from 'react';
+import {Element} from 'react-scroll';
+import {CSSTransition} from 'react-transition-group';
 
 import './Inscricoes.scss';
-import TabActions from './Tabs/TabActions';
+import TabActions from './Tabs/TabActions/TabActions';
 import Spinner from 'components/UI/Spinner/Spinner';
 const TabConsulta = React.lazy(() => import ('./Tabs/TabConsulta'));
 const TabInscricao = React.lazy(() => import ('./Tabs/TabInscricao'));
@@ -11,28 +13,40 @@ const Inscricoes = (props) => {
         setCurrentTab] = useState('actions');
 
     return (
-        <section className="Inscricoes">
-            <div className="container">
-                {currentTab === 'actions'
-                    ? <TabActions setTab={setCurrentTab}></TabActions>
-                    : ''
-}
+        <Element name="section-inscricoes">
+            <section className="Inscricoes">
+                <div className="container">
+                    <CSSTransition
+                        in={currentTab === 'actions'}
+                        timeout={300}
+                        unmountOnExit={true}
+                        classNames="CSSTransition--fade">
+                        <TabActions setTab={setCurrentTab}></TabActions>
+                    </CSSTransition>
 
-                {currentTab === 'consulta'
-                    ? <Suspense fallback={< Spinner fullscreen />}>
-                            <TabConsulta/>
+                    <CSSTransition
+                        in={currentTab === 'consulta'}
+                        timeout={300}
+                        unmountOnExit={true}
+                        classNames="CSSTransition--fade">
+                        <Suspense fallback={< Spinner fullscreen />}>
+                            <TabConsulta setTab={setCurrentTab}/>
                         </Suspense>
-                    : ''
-}
+                    </CSSTransition>
 
-                {currentTab === 'inscricao'
-                    ? <Suspense fallback={< Spinner fullscreen />}>
-                            <TabInscricao/>
+                    <CSSTransition
+                        in={currentTab === 'inscricao'}
+                        timeout={300}
+                        unmountOnExit={true}
+                        classNames="CSSTransition--fade">
+                        <Suspense fallback={< Spinner fullscreen />}>
+                            <TabInscricao setTab={setCurrentTab}/>
                         </Suspense>
-                    : ''
-}
-            </div>
-        </section>
+                    </CSSTransition>
+
+                </div>
+            </section>
+        </Element>
     )
 }
 

@@ -1,0 +1,45 @@
+@import 'assets/scss/variables/_all.scss';
+@import 'assets/scss/util/_animations.scss';
+
+.form-control{
+    font-family: inherit;
+    font-weight: lighter;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.637);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.041);
+    color: rgb(172, 172, 172);
+    letter-spacing: 0.4px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 44px;
+    padding: 0 13px;
+    border: 1.4px solid transparent;
+    @include transition();
+
+    &::placeholder{
+        color: rgb(214, 214, 214);
+    }
+
+    &:focus{
+        border-color: $color-secondary;
+    }
+    
+}
+
+.form-group{
+    margin-bottom: 15px;
+    
+    label{
+        font-size: 15px;
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        color: rgb(146, 146, 146);
+        font-weight: lighter;
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 13px;
+        }
+    }
+}

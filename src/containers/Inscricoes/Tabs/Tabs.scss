@@ -1,0 +1,69 @@
+@import 'assets/scss/variables/__breakpoints.scss';
+@import 'assets/scss/util/__animations.scss';
+
+.Inscricoes__tab {
+    &:hover {
+        animation: none;
+    }
+
+    &__header {
+        position: relative;
+        padding: 20px 40px;
+        background-color: rgba(56, 20, 139, 0.808);
+        border-radius: 12px 12px 0 0;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.129);
+        z-index: 3;
+
+        @media screen and (max-width: $bp-MD){
+            padding: 15px 25px;
+        }
+
+        &__title {
+            font-weight: 800;
+            color: #fff;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        background-color: rgb(243, 243, 243);
+        padding: 35px 40px;
+        border-radius: 0 0 10px 10px;
+
+        @media screen and (max-width: $bp-MD) {
+            padding: 25px;
+        }
+    }
+
+    &__back {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-weight: 800;
+        color: #fff;
+        font-size: 15px;
+        @include transition();
+
+        @media screen and (max-width: $bp-MD) {
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        &:hover {
+            @include scale(1.03);
+        }
+
+        .ico {
+            display: inline-block;
+            background-image: url("../../../assets/images/ico/chevron-left.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 13px;
+            height: 13px;
+            margin-right: 10px;
+        }
+    }
+}
