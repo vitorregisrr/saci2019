@@ -1,4 +1,5 @@
 import React from 'react';
+import InputMask from 'react-input-mask';
 
 import './Tabs.scss';
 
@@ -14,12 +15,12 @@ const TabConsulta = props => {
                 </button>
             </div>
             <div className="Inscricoes__tab__body">
-
                 <div className="row justify-content-center">
                     <div className="col-6 col-lg-4 col-md-4">
                         <div className="form-group">
                             <label htmlFor="inputCPF">CPF</label>
-                            <input
+                            <InputMask
+                                mask="999.999.999-99" 
                                 type="text"
                                 className="form-control"
                                 id="inputCPF"

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import {Link as ScrollLink, scroller} from "react-scroll";
 
 const NavbarItem = (props) => {
@@ -33,14 +33,15 @@ const NavbarItem = (props) => {
                         className="Navbar__links__item">
                         {props.label}
                     </Link>)
-                : <Link
+                : <NavLink
                     to={props.routeTo}
                     onClick={() => scrollWithDelay(props.scrollTo, props.offset)}
+                    activeClass="active"
                     className={`Navbar__links__item ${props.routeTo === '/inscricoes'
                     ? 'inscricoes'
                     : ''}`}>
                     {props.label}{props.routeTo === '/inscricoes' ? <span>-></span> : ''}
-                </Link>
+                </NavLink>
 }
         </li>
     )

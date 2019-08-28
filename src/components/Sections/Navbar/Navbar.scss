@@ -108,7 +108,7 @@
 
             &.inscricoes {
                 font-size: 15px;
-                padding: 8px 24px;
+                padding: 8px 29px;
                 background-color: #fff;
                 color: black;
                 margin-left: 10px;
@@ -116,11 +116,9 @@
 
                 &.active,
                 &:hover {
+                    background-color: $color-primary;
+                    color: #fff;
                     transform: scale(1.02);
-                }
-
-                &.active {
-                    text-shadow: 0.4px 0.4px black;
                 }
 
                 span {

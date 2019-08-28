@@ -1,4 +1,5 @@
 import React from 'react';
+import InputMask from 'react-input-mask';
 
 import './Tabs.scss';
 
@@ -41,7 +42,8 @@ const TabInscricao = props => {
                     <div className="col-6 col-lg-2 col-md-4">
                         <div className="form-group">
                             <label htmlFor="inputCPF">CPF</label>
-                            <input
+                            <InputMask
+                                mask="999.999.999-99" 
                                 type="text"
                                 className="form-control"
                                 id="inputCPF"
@@ -52,7 +54,8 @@ const TabInscricao = props => {
                     <div className="col-6 col-lg-2 col-md-4">
                         <div className="form-group">
                             <label htmlFor="inputNasc">Data Nasc.</label>
-                            <input
+                            <InputMask
+                                mask="99/99/9999" 
                                 type="text"
                                 className="form-control"
                                 id="inputNasc"
