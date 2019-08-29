@@ -6,7 +6,7 @@
     width: 100vw;
     overflow: hidden;
     background-image: url(../../assets/images/backgrounds/home-hero.png);
-    background-position: -40px -100px;
+    background-position: -40px 20%;
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -14,7 +14,7 @@
         min-height: calc(100vh - 182px);
         background-position: center center;
         background-position: 48% -50px;
-        background-size: 120vh;
+        background-size: 122%;
         padding: 20px 0 40px 0;
     }
 }

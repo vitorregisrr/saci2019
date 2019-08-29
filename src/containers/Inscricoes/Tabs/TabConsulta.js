@@ -1,34 +1,106 @@
-import React from 'react';
-import InputMask from 'react-input-mask';
+import React, {useState} from 'react';
+import {updateFormState} from 'util/updateFormState';
+import ReactWOW from 'react-wow';
+import {CSSTransition} from 'react-transition-group';
 
 import './Tabs.scss';
+import FormGroup from 'components/UI/Form/FormGroup';
+import Button from 'components/UI/Button/Button';
 
 const TabConsulta = props => {
+    const [isFormValid,
+        setisFormValid] = useState(false);
+
+    const [formCtrls,
+        setFormCtrls] = useState({
+        cpf: {
+            value: '',
+            validation: {
+                isValid: false,
+                error: '',
+                touched: false,
+                minLength: 14
+            }
+        },
+
+        inscricao: {
+            value: '',
+            validation: {
+                isValid: false,
+                error: '',
+                touched: false,
+                minLength: 9
+            }
+        }
+    });
+
+    const inputChangeHandler = (e, key) => {
+        const [newIsFormValid,
+            newFormCtrls] = updateFormState(e, key, formCtrls);
+        setisFormValid(newIsFormValid);
+        setFormCtrls(newFormCtrls);
+    }
+
     return (
         <section className="Inscricoes__tab float">
-            <div className="Inscricoes__tab__header">
-                <button
-                    className="Inscricoes__tab__back btn-transparent"
-                    onClick={() => props.setTab('actions')}>
-                    <span className="ico"></span>
-                    Voltar
-                </button>
-            </div>
-            <div className="Inscricoes__tab__body">
-                <div className="row justify-content-center">
-                    <div className="col-6 col-lg-4 col-md-4">
-                        <div className="form-group">
-                            <label htmlFor="inputCPF">CPF</label>
-                            <InputMask
-                                mask="999.999.999-99" 
-                                type="text"
-                                className="form-control"
-                                id="inputCPF"
-                                placeholder="011.000.101-10"/>
+            <ReactWOW animation="fadeInUp">
+                <div className="Inscricoes__tab__header">
+                    <button
+                        className="Inscricoes__tab__back btn-transparent"
+                        onClick={() => props.setTab('actions')}>
+                        <span className="ico"></span>
+                        Voltar
+                    </button>
+                </div>
+                <div className="Inscricoes__tab__body">
+
+                    <div className="row justify-content-center">
+
+                        <div className="col-10 col-lg-3 col-md-4">
+                            <div className="form-group">
+                                <FormGroup
+                                    label="CPF"
+                                    mask="999.999.999-99"
+                                    type="input-mask"
+                                    name="cpf"
+                                    value={formCtrls.cpf.value}
+                                    error={formCtrls.cpf.validation.error}
+                                    isInvalid={!formCtrls.cpf.validation.isValid}
+                                    isTouched={formCtrls.cpf.validation.touched}
+                                    placeholder="011.000.101-10"
+                                    onChangeHandler={inputChangeHandler}/>
+                            </div>
                         </div>
+
+                        <div className="col-10 col-lg-3 col-md-4">
+                            <div className="form-group">
+                                <FormGroup
+                                    label="Cód. Inscrição"
+                                    mask="999999999"
+                                    type="input-mask"
+                                    name="inscricao"
+                                    value={formCtrls.inscricao.value}
+                                    error={formCtrls.inscricao.validation.error}
+                                    isInvalid={!formCtrls.inscricao.validation.isValid}
+                                    isTouched={formCtrls.inscricao.validation.touched}
+                                    placeholder="0110101011"
+                                    onChangeHandler={inputChangeHandler}/>
+                            </div>
+                        </div>
+
+                        <div className="col-12">
+                            <CSSTransition
+                                in={isFormValid}
+                                timeout={300}
+                                unmountOnExit={true}
+                                classNames="CSSTransition--fade">
+                                <Button variant="primary">Me inscreva!</Button>
+                            </CSSTransition>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            </ReactWOW>
         </section>
     )
 }

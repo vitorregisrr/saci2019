@@ -15,31 +15,35 @@
     color: #fff;
     text-align: left;
     @include transition();
-
-    @media screen and (max-width: $bp-MD){
-        padding: 35px 35px;
+    @media screen and (max-width: $bp-MD) {
+        padding: 35px;
     }
-    
     &:hover {
         @include scale(1.02);
         box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.287);
     }
-
     &:after,
     &:before {
         content: '';
         position: absolute;
-        right: -30px;
+        right: -6%;
         width: 30%;
         height: 4px;
         background-color: $color-primary;
         transform: rotate(-50deg);
     }
 
+    &.lg {
+        &:after,
+        &:before {
+            content: '';
+            right: -10%;
+        }
+
+    }
     &:after {
         top: 95%;
     }
-
     &:before {
         top: 110%;
     }
@@ -51,7 +55,7 @@
         font-size: 20px;
         letter-spacing: 0.3px;
         text-transform: uppercase;
-        margin: 0 0 14px 0;
+        margin: 0 0 14px;
 
         span.ico {
             display: inline-block;
@@ -61,8 +65,7 @@
             width: 35px;
             height: 35px;
             margin-right: 4px;
-
-            @media screen and (max-width: $bp-MD){
+            @media screen and (max-width: $bp-MD) {
                 width: 28px;
                 height: 28px;
             }
@@ -75,8 +78,12 @@
                 margin-right: 8px;
                 background-image: url("../../../../assets/images/ico/eye.png");
             }
-        }
 
+            &.code {
+                margin-right: 8px;
+                background-image: url("../../../../assets/images/ico/code.png");
+            }
+        }
         @media screen and (max-width: $bp-MD) {
             font-size: 15epx;
             margin-bottom: 3px;
@@ -88,7 +95,6 @@
         font-weight: 300;
         line-height: 1.5;
         margin: 0;
-
         @media screen and (max-width: $bp-MD) {
             margin-top: 10px;
             font-size: 14px;

@@ -19,7 +19,6 @@ const NavbarItem = (props) => {
             {props.insideHome
                 ? (props.path === '/'
                     ? <ScrollLink
-                            activeClass="active"
                             spy={true}
                             smooth={true}
                             offset={props.offset || 0}
@@ -36,7 +35,6 @@ const NavbarItem = (props) => {
                 : <NavLink
                     to={props.routeTo}
                     onClick={() => scrollWithDelay(props.scrollTo, props.offset)}
-                    activeClass="active"
                     className={`Navbar__links__item ${props.routeTo === '/inscricoes'
                     ? 'inscricoes'
                     : ''}`}>

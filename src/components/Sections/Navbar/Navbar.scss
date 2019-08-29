@@ -133,13 +133,10 @@
     &.sticky {
         padding: 2px 0;
         background-color: $color-dark;
+        opacity: 0.9;
         box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.08);
         animation-name: setSticky;
         animation-duration: 0.6s;
-        // background-image: url(../../../assets/images/backgrounds/home-hero.png);
-        // background-size: 70%;
-        // background-position: center center;
-        // background-repeat: no-repeat;
 
         @media screen and (max-width: $bp-MD){
             padding: 0;

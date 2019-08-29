@@ -23,6 +23,10 @@
 
     &:focus{
         border-color: $color-secondary;
+
+        & + label{
+            color: $color-primary;
+        }
     }
     
 }
@@ -40,6 +44,40 @@
 
         @media screen and (max-width: $bp-MD){
             font-size: 13px;
+        }
+    }
+
+    &.is-valid{
+        label{
+            color: $color-success;
+        }
+
+        .form-control{
+            border-color: $color-success;
+            background-color: transparentize($color-success, 0.92)
+        }
+    }
+    
+    &.has-error{
+        .form-control{
+            border-color: $color-primary;
+            background-color: transparentize($color-primary, 0.92)
+        }
+
+        label{
+            color: $color-primary;
+        }
+    }
+    .form-error{
+        margin-top: 4px;
+        display: block;
+        color: $color-primary;
+        font-size: 12px;
+        font-weight: lighter;
+        line-height: 1.2;
+        
+        @media screen and (max-width: $bp-MD){
+            font-size: 10px;
         }
     }
 }

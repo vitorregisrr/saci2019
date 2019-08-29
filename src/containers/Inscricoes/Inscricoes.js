@@ -5,12 +5,19 @@ import {CSSTransition} from 'react-transition-group';
 import './Inscricoes.scss';
 import TabActions from './Tabs/TabActions/TabActions';
 import Spinner from 'components/UI/Spinner/Spinner';
+import Modal from 'components/UI/Modal/Modal';
 const TabConsulta = React.lazy(() => import ('./Tabs/TabConsulta'));
 const TabInscricao = React.lazy(() => import ('./Tabs/TabInscricao'));
 
 const Inscricoes = (props) => {
+    const [modalStatus, setModalStatus] = useState(false);
+
     const [currentTab,
         setCurrentTab] = useState('actions');
+
+    // const setCurrentTab = () => {
+    //     setModalStatus(true);
+    // }
 
     return (
         <Element name="section-inscricoes">
@@ -46,6 +53,13 @@ const Inscricoes = (props) => {
 
                 </div>
             </section>
+            <Modal 
+                setStatus={setModalStatus} 
+                active={modalStatus}>
+                    <h3 className="title">Oops, as inscrições ainda não foram liberadas!</h3>
+                    <p className="desc">Ainda estamos trabalhando nessa função, as inscrições
+                    serão liberadas em breve! Por enquanto, fique de olho no nosso facebook :)</p>
+            </Modal>
         </Element>
     )
 }
