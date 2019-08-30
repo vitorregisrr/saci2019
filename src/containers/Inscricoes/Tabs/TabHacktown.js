@@ -16,6 +16,7 @@ const TabHacktown = props => {
         nomeEquipe: {
             value: '',
             validation: {
+                required: true,
                 isValid: false,
                 error: '',
                 touched: false,
@@ -78,7 +79,7 @@ const TabHacktown = props => {
                     <div className="row">
                         <div className="col-lg-3 col-md-6">
                             <FormGroup
-                                label="Nome da equipe"
+                                label="* Nome da equipe"
                                 name="nomeEquipe"
                                 value={formCtrls.nomeEquipe.value}
                                 error={formCtrls.nomeEquipe.validation.error}

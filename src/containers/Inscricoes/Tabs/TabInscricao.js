@@ -64,7 +64,7 @@ const TabInscricao = props => {
                 required: true,
                 isValid: false,
                 error: '',
-                touched: false,
+                touched: false
             }
         },
 
@@ -74,22 +74,38 @@ const TabInscricao = props => {
                 required: false,
                 isValid: false,
                 error: '',
-                touched: false,
+                touched: false
             }
         },
 
-        turno: {
+        semestre: {
             value: '',
             validation: {
                 required: false,
                 isValid: false,
                 error: '',
-                touched: false,
+                touched: false
             }
         }
     });
 
     const inputChangeHandler = (e, key, isSelect) => {
+
+        if (isSelect) {
+            const newFormCtrls = {
+                ...formCtrls
+            };
+            if (e.value === 'ifsul-bage') {
+                newFormCtrls.semestre.validation.required = true;
+                newFormCtrls.curso.validation.required = true;
+            } else {
+                newFormCtrls.semestre.validation.required = false;
+                newFormCtrls.curso.validation.required = false;
+            }
+
+            setFormCtrls(newFormCtrls);
+        }
+
         const [newIsFormValid,
             newFormCtrls] = updateFormState(e, key, formCtrls, isSelect);
         setIsFormValid(newIsFormValid);
@@ -178,12 +194,10 @@ const TabInscricao = props => {
                                     {
                                         value: 'ifsul-bage',
                                         label: 'IFsul - Campus Bagé'
-                                    },
-                                    {
+                                    }, {
                                         value: 'ifsul-pelotas',
                                         label: 'IFsul - Campus Pelotas'
-                                    },
-                                    {
+                                    }, {
                                         value: 'unipampa',
                                         label: 'Unipampa'
                                     }, {
@@ -198,8 +212,13 @@ const TabInscricao = props => {
                                     }, {
                                         value: 'Estácio',
                                         label: 'Estácio'
+                                    }, {
+                                        value: 'Outros',
+                                        label: 'Outros'
                                     }
-                                ].sort((a,b) => a.label > b.label ? 1 : -1 )}
+                                ].sort((a, b) => a.label > b.label
+                                    ? 1
+                                    : -1)}
                                     name="instituicao"
                                     placeholder="The University of Manchester"
                                     value={formCtrls.instituicao.value}
@@ -209,6 +228,60 @@ const TabInscricao = props => {
                                     onChangeHandler={inputChangeHandler}/>
                             </div>
                         </div>
+
+                        {formCtrls.instituicao.value.value === 'ifsul-bage'
+                            ? <React.Fragment>
+                                    <div className="col-lg-4 col-md-6">
+                                        <FormGroup
+                                            label="* Curso"
+                                            type="select"
+                                            options={[
+                                            {
+                                                value: 'tads',
+                                                label: 'TADS'
+                                            }, {
+                                                value: 'agro',
+                                                label: 'Agropecuária'
+                                            }, {
+                                                value: 'ti',
+                                                label: 'Téc. Info.'
+                                            }, {
+                                                value: 'engenharia-agro',
+                                                label: 'Engenharia Agronômica'
+                                            }, {
+                                                value: 'tecnologia-alimentos',
+                                                label: 'Técnologia em Alimentos'
+                                            }, {
+                                                value: 'outros',
+                                                label: 'Outros'
+                                            }
+                                        ].sort((a, b) => a.label > b.label
+                                            ? 1
+                                            : -1)}
+                                            name="curso"
+                                            placeholder="The University of Manchester"
+                                            value={formCtrls.curso.value}
+                                            error={formCtrls.curso.validation.error}
+                                            isInvalid={!formCtrls.curso.validation.isValid}
+                                            isTouched={formCtrls.curso.validation.touched}
+                                            onChangeHandler={inputChangeHandler}/>
+                                    </div>
+                                    <div className="col-lg-4 col-md-6">
+                                        <FormGroup
+                                            label="* Semestre"
+                                            mask="9º semestre"
+                                            type="input-mask"
+                                            name="semestre"
+                                            value={formCtrls.semestre.value}
+                                            error={formCtrls.semestre.validation.error}
+                                            isInvalid={!formCtrls.semestre.validation.isValid}
+                                            isTouched={formCtrls.semestre.validation.touched}
+                                            placeholder="1º semestre"
+                                            onChangeHandler={inputChangeHandler}/>
+                                    </div>
+                                </React.Fragment>
+                            : ''
+}
 
                         <div className="col-12 py-2 d-flex justify-content-end">
                             <CSSTransition

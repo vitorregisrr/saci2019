@@ -22,7 +22,7 @@ export const updateFormState = (e, key, formCtrls, isSelect) => {
 
     let isFormValid = true;
     for (let key in newForm) {
-        if (!newForm[key].validation.isValid) {
+        if (!newForm[key].validation.isValid && newForm[key].validation.required) {
             isFormValid = false;
         }
     }
