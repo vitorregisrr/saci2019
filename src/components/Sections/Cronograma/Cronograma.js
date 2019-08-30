@@ -13,51 +13,51 @@ const Cronograma = (props) => {
         setCronograma([
             // Dia 1
             {
-                // atividades: [
-                //     {
-                //         titulo: 'Credenciamento',
-                //         horario: {
-                //             inicio: '08:00',
-                //             fim: '08:30'
-                //         }
-                //     },
-                //     {
-                //         titulo: 'Em breve!',
-                //         horario: {
-                //             inicio: '08:30',
-                //             fim: '09:15'
-                //         },
-                //         tipo: 'Vazio'
-                //     },
-                //     // {
-                //     //     titulo: 'Agilidade no desenvolvimento com Agile e Scrum',
-                //     //     horario: {
-                //     //         inicio: '09:30',
-                //     //         fim: '10:15'
-                //     //     },
-                //     //     tipo: 'Palestra',
-                //     //     realizador: {
-                //     //         nome: 'Fulana de tal',
-                //     //         cargo: 'Gerente de projetos na Evolve'
-                //     //     }
-                //     // },
-                //     {
-                //         titulo: 'Coffee Break',
-                //         horario: {
-                //             inicio: '10:30',
-                //             fim: '10:50'
-                //         }
-                //     },
+                atividades: [
+                    {
+                        titulo: 'Credenciamento',
+                        horario: {
+                            inicio: '08:00',
+                            fim: '08:30'
+                        }
+                    },
+                    {
+                        titulo: 'Em breve!',
+                        horario: {
+                            inicio: '08:30',
+                            fim: '09:15'
+                        },
+                        tipo: 'Vazio'
+                    },
+                    {
+                        titulo: 'Agilidade no desenvolvimento com Agile e Scrum',
+                        horario: {
+                            inicio: '09:30',
+                            fim: '10:15'
+                        },
+                        tipo: 'Palestra',
+                        realizador: {
+                            nome: 'Fulana de tal',
+                            cargo: 'Gerente de projetos na Evolve'
+                        }
+                    },
+                    {
+                        titulo: 'Coffee Break',
+                        horario: {
+                            inicio: '10:30',
+                            fim: '10:50'
+                        }
+                    },
     
-                //     {
-                //         titulo: 'Em breve!',
-                //         horario: {
-                //             inicio: '11:00',
-                //             fim: '11:45'
-                //         },
-                //         tipo: 'Vazio'
-                //     },
-                // ],    
+                    {
+                        titulo: 'Em breve!',
+                        horario: {
+                            inicio: '11:00',
+                            fim: '11:45'
+                        },
+                        tipo: 'Vazio'
+                    },
+                ],    
             },
             // Dia 2,
             {},
