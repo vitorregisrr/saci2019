@@ -8,7 +8,7 @@ const TabOptions = props => {
         <section className="Inscricoes__actions Inscricoes__tab pt-3 pt-lg-5">
             <div className="row justify-content-center float">
                 <div className="col-lg-5 mr-lg-3 mb-4 mb-lg-0">
-                    <ReactWOW animation="zoomIn">
+                    <ReactWOW animation="fadeIn">
                         <button
                             onClick={() => props.setTab('inscricao')}
                             className="Inscricoes__action">
@@ -25,7 +25,7 @@ const TabOptions = props => {
                     </ReactWOW>
                 </div>
                 <div className="col-lg-5">
-                    <ReactWOW animation="zoomIn">
+                    <ReactWOW animation="fadeIn">
                         <button onClick={() => props.setTab('consulta')} className="Inscricoes__action">
                             <h3 className="Inscricoes__action__title">
                                 <span className="ico eye"></span>
@@ -33,13 +33,13 @@ const TabOptions = props => {
                             </h3>
 
                             <p className="Inscricoes__action__desc">
-                                Já realizei minha inscrição e gostaria de verifica-la ou gerencia-la.
+                                Já realizei minha inscrição e gostaria de verifica-la.
                             </p>
                         </button>
                     </ReactWOW>
                 </div>
                 <div className="col-lg-11 mt-4">
-                    <ReactWOW animation="zoomIn">
+                    <ReactWOW animation="fadeIn">
                         <button
                             onClick={() => props.setTab('hacktown')}
                             className="Inscricoes__action lg">

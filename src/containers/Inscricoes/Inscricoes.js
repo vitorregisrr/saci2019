@@ -8,16 +8,16 @@ import Spinner from 'components/UI/Spinner/Spinner';
 import Modal from 'components/UI/Modal/Modal';
 const TabConsulta = React.lazy(() => import ('./Tabs/TabConsulta'));
 const TabInscricao = React.lazy(() => import ('./Tabs/TabInscricao'));
+const TabHacktown = React.lazy(() => import ('./Tabs/TabHacktown'));
 
 const Inscricoes = (props) => {
-    const [modalStatus, setModalStatus] = useState(false);
+    const [modalStatus,
+        setModalStatus] = useState(false);
 
     const [currentTab,
         setCurrentTab] = useState('actions');
 
-    // const setCurrentTab = () => {
-    //     setModalStatus(true);
-    // }
+    // const setCurrentTab = () => {     setModalStatus(true); }
 
     return (
         <Element name="section-inscricoes">
@@ -51,14 +51,22 @@ const Inscricoes = (props) => {
                         </Suspense>
                     </CSSTransition>
 
+                    <CSSTransition
+                        in={currentTab === 'hacktown'}
+                        timeout={300}
+                        unmountOnExit={true}
+                        classNames="CSSTransition--fade">
+                        <Suspense fallback={< Spinner fullscreen />}>
+                            <TabHacktown setTab={setCurrentTab}/>
+                        </Suspense>
+                    </CSSTransition>
+
                 </div>
             </section>
-            <Modal 
-                setStatus={setModalStatus} 
-                active={modalStatus}>
-                    <h3 className="title">Oops, as inscrições ainda não foram liberadas!</h3>
-                    <p className="desc">Ainda estamos trabalhando nessa função, as inscrições
-                    serão liberadas em breve! Por enquanto, fique de olho no nosso facebook :)</p>
+            <Modal setStatus={setModalStatus} active={modalStatus}>
+                <h3 className="title">Oops, as inscrições ainda não foram liberadas!</h3>
+                <p className="desc">Ainda estamos trabalhando nessa função, as inscrições serão
+                    liberadas em breve! Por enquanto, fique de olho no nosso facebook :)</p>
             </Modal>
         </Element>
     )

@@ -1,11 +1,14 @@
 import React from 'react';
 
+import './Button.scss';
+
 const Button = (props) => {
     return (
         <button
-            className={`btn 
+            className={`btn
+            ${props.classNames}
             ${props.size ? 'btn-' + props.size : ''}
-            ${props.variant}
+            ${props.variant ? 'btn-'+props.variant : ''}
             ${props.outline ? '--outline' : ''} `}>
             {props.children}
         </button>

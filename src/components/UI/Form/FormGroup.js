@@ -1,6 +1,9 @@
 import React from 'react';
 import InputMask from 'react-input-mask';
 import {CSSTransition} from 'react-transition-group';
+import Select from 'react-select';
+
+import './Forms.scss';
 
 const FormGroup = props => {
     let input = false;
@@ -14,7 +17,16 @@ const FormGroup = props => {
             value={props.value}
             onChange={(e) => props.onChangeHandler(e, props.name)}/>
 
-    } else if (props.type === 'select') {} else if (props.type === 'input-mask') {
+    } else if (props.type === 'select') {
+        input = <Select
+            value={props.value}
+            onChange={(selectedOption) => props.onChangeHandler(selectedOption, props.name, true)}
+            placeholder={props.placeholder}
+            options={props.options}
+            isSearchable={true}
+            classNamePrefix="custom-select"/>
+
+    } else if (props.type === 'input-mask') {
         input = <InputMask
             mask={props.mask}
             type="text"
@@ -39,8 +51,8 @@ const FormGroup = props => {
                 timeout={300}
                 unmountOnExit={true}
                 classNames="CSSTransition--fade">
-                    <div className="form-error">{props.error}</div>
-                </CSSTransition>
+                <div className="form-error">{props.error}</div>
+            </CSSTransition>
         </div>
     )
 }

@@ -2,7 +2,6 @@ import validator from 'validator';
 
 export const checkValidity = (newValue, config) => {
     const rules = config.validation;
-    const label = config.label;
     let error = '';
     let isValid = true;
 
@@ -15,7 +14,7 @@ export const checkValidity = (newValue, config) => {
         const isMinLength = validator.isLength(newValue.replace(/_/g, ''), {min: rules.minLength}) && isValid;
         error = isMinLength
             ? ''
-            : `Este campo deve ter no  minímo ${rules.minLength} caractéres`;
+            : `Este campo deve ter no  minímo ${rules.minLength} caracteres`;
         isValid = isMinLength && isValid;
     }
 
@@ -23,7 +22,7 @@ export const checkValidity = (newValue, config) => {
         const isMaxLength = validator.isLength(newValue, {max: rules.maxLength}) && isValid;
         error = isMaxLength
             ? ''
-            : `Este campo pode ter no máximo ${rules.maxLength} caractéres`;
+            : `Este campo pode ter no máximo ${rules.maxLength} caracteres`;
         isValid = isMaxLength && isValid;
     }
     if (rules.isEmail) {
