@@ -21,7 +21,7 @@ const CronogramaDia = (props) => {
                         </Sticky>
                     </StickyContainer>
                 </div>
-                <div className="col-auto">
+                <div className="col-9 col-md-8 col-lg-9">
                     <div className="Cronograma__dia__atividades">
                         {props.atividades
                             ? props
