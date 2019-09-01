@@ -26,8 +26,8 @@ const CronogramaDia = (props) => {
                         {props.atividades
                             ? props
                                 .atividades
-                                .map(atividade => 
-                                    <CronogramaItem 
+                                .map((atividade, i) => 
+                                    <CronogramaItem key={`cronograma-dia-${i}`}
                                     {...atividade}/>
                                 )
                             : <h3 className="coming-soon float pt-3">Em breve</h3>
