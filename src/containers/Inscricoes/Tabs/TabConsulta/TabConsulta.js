@@ -1,18 +1,16 @@
 import React, {useState} from 'react';
-import {updateFormState} from 'util/updateFormState';
 import ReactWOW from 'react-wow';
-import {CSSTransition} from 'react-transition-group';
+import axios from 'axios.instance';
 
 import '../Tabs.scss';
-import FormGroup from 'components/UI/Form/FormGroup';
+import Spinner from 'components/UI/Spinner/Spinner';
 import Button from 'components/UI/Button/Button';
+import ConsultaForm from './ConsultaForm';
+import {updateFormState} from 'util/updateFormState';
 
 const TabConsulta = props => {
-    const [isFormValid,
-        setisFormValid] = useState(false);
 
-    const [formCtrls,
-        setFormCtrls] = useState({
+    const defaultFormCtrls = {
         cpf: {
             value: '',
             validation: {
@@ -23,13 +21,51 @@ const TabConsulta = props => {
                 minLength: 14
             }
         }
-    });
+    };
 
-    const inputChangeHandler = (e, key) => {
+    const [isFetching,
+        setIsFetching] = useState(false);
+
+    const [hasError,
+        setHasError] = useState(false);
+
+    const [fetchData,
+        setFetchData] = useState(false);
+
+    const [fetchError,
+        setFetchError] = useState(false);
+
+    const [isFormValid,
+        setIsFormValid] = useState(false);
+
+    const [formCtrls,
+        setFormCtrls] = useState(defaultFormCtrls);
+
+    const inputChangeHandler = (e, key, isSelect) => {
         const [newIsFormValid,
-            newFormCtrls] = updateFormState(e, key, formCtrls);
-        setisFormValid(newIsFormValid);
+            newFormCtrls] = updateFormState(e, key, formCtrls, isSelect);
+        setIsFormValid(newIsFormValid);
         setFormCtrls(newFormCtrls);
+    }
+
+    const fetchConsulta = () => {
+        setIsFetching(true);
+        axios.get('/check', {
+            cpf: formCtrls.cpf.value
+        }).then(response => {
+            setHasError(false);
+            fetchData(response);
+        }).catch(error => {
+            setHasError(true);
+            setFetchError(error);
+        }). finally(() => {
+            setIsFetching(false);
+        })
+    }
+
+    const resetForm = () => {
+        setFetchData(false);
+        setFormCtrls(defaultFormCtrls);
     }
 
     return (
@@ -44,44 +80,23 @@ const TabConsulta = props => {
                     </button>
                 </div>
                 <div className="Inscricoes__tab__body">
-
-                    <div className="row justify-content-center">
-
-                        {props.fetchErrors
-                            ? props.fetcherrors
-                                .errors
-                                .map(error => <div className="col-10 col-lg-3 col-md-4">
-                                    <div className="form-group">
-                                        <label class="form-error">error</label>
-                                    </div>
-                                </div>)
-                            : ''}
-
-                        <div className="col-10 col-lg-3 col-md-4">
-                            <FormGroup
-                                label="* CPF"
-                                mask="999.999.999-99"
-                                type="input-mask"
-                                name="cpf"
-                                value={formCtrls.cpf.value}
-                                error={formCtrls.cpf.validation.error}
-                                isInvalid={!formCtrls.cpf.validation.isValid}
-                                isTouched={formCtrls.cpf.validation.touched}
-                                placeholder="011.000.101-10"
-                                onChangeHandler={inputChangeHandler}/>
-                        </div>
-
-                        <div className="col-12 py-2 d-flex justify-content-end">
-                            <CSSTransition
-                                in={isFormValid}
-                                timeout={300}
-                                unmountOnExit={true}
-                                classNames="CSSTransition--fade">
-                                <Button variant="primary" classNames="w-100">Consultar</Button>
-                            </CSSTransition>
-                        </div>
-
-                    </div>
+                    {isFetching
+                        ? <Spinner color="primary" classNames="mt-5"/>
+                        : fetchData
+                            ? <div class="success">
+                                    <h3 className="success__caption color-success text-bold text-uppercase">
+                                       Inscrição encontrada!
+                                    </h3>
+                                </div>
+                            : <ConsultaForm
+                                isFormValid={isFormValid}
+                                fetchConsulta={fetchConsulta}
+                                formCtrls={formCtrls}
+                                updateFormState={updateFormState}
+                                inputChangeHandler={inputChangeHandler}
+                                hasError={hasError}
+                                fetchErrors={fetchError}/>
+                        }   
                 </div>
             </ReactWOW>
         </section>

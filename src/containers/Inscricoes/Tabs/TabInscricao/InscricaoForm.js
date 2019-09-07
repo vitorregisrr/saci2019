@@ -36,6 +36,23 @@ const InscricaoForm = props => {
 
     return (
         <div className="row">
+            {props.hasError
+                ? <div className="col-12 text-center">
+                        <label class="color-primary mb-2">
+                            <b>Oops! Ocorreram alguns erros:</b>
+                        </label>
+                        {Array.isArray(props.fetchErrors)
+                            ? props
+                                .fetchErrors
+                                .map(error => <div className="form-group mb-2">
+                                    <label class="color-primary">{error}</label>
+                                </div>)
+                            : <div className="form-group mb-2">
+                                <label class="color-primary">{props.fetchErrors.message}</label>
+                            </div>}
+                    </div>
+                : ''}
+
             <div className="col-lg-4 col-md-6">
                 <FormGroup
                     label="* Nome Completo"
@@ -162,7 +179,7 @@ const InscricaoForm = props => {
                         </div>
                     </React.Fragment>
                 : ''
-            }
+}
 
             <div className="col-12 py-2 d-flex justify-content-end">
                 <CSSTransition
@@ -170,7 +187,10 @@ const InscricaoForm = props => {
                     timeout={300}
                     unmountOnExit={true}
                     classNames="CSSTransition--fade">
-                    <Button variant="primary" classNames="w-100" onClick={() => props.fetchInscricao()}>Me inscreva!</Button>
+                    <Button
+                        variant="primary"
+                        classNames="w-100"
+                        onClick={() => props.fetchInscricao()}>Me inscreva!</Button>
                 </CSSTransition>
             </div>
         </div>

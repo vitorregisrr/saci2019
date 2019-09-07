@@ -90,11 +90,14 @@ const TabInscricao = props => {
     const [isFetching,
         setIsFetching] = useState(false);
 
+    const [hasError,
+        setHasError] = useState(false);
+
     const [fetchData,
         setFetchData] = useState(false);
 
     const [fetchError,
-        setfetchError] = useState(false);
+        setFetchError] = useState(false);
 
     const [isFormValid,
         setIsFormValid] = useState(false);
@@ -133,10 +136,11 @@ const TabInscricao = props => {
             birthdate: Date.parse(formCtrls.dataNasc.value),
             institution: formCtrls.instituicao.value
         }).then(response => {
+            setHasError(false);
             fetchData(response);
         }).catch(error => {
-            setfetchError(error);
-
+            setHasError(true);
+            setFetchError(error);
         }). finally(() => {
             setIsFetching(false);
         })
@@ -159,7 +163,7 @@ const TabInscricao = props => {
                 </div>
                 <div className="Inscricoes__tab__body">
                     {isFetching
-                        ? <Spinner/>
+                        ? <Spinner color="primary" classNames="mt-5"/>
                         : fetchData
                             ? <div class="success">
                                     <span className="success__icon"></span>
@@ -174,8 +178,9 @@ const TabInscricao = props => {
                                 formCtrls={formCtrls}
                                 updateFormState={updateFormState}
                                 inputChangeHandler={inputChangeHandler}
-                                fetchError={fetchError}/>
-                    }
+                                hasError={hasError}
+                                fetchErrors={fetchError}/>
+                        }   
                 </div>
             </ReactWOW>
         </section>

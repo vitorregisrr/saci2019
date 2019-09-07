@@ -6,8 +6,8 @@ import './Inscricoes.scss';
 import TabActions from './Tabs/TabActions/TabActions';
 import Spinner from 'components/UI/Spinner/Spinner';
 import Modal from 'components/UI/Modal/Modal';
-const TabConsulta = React.lazy(() => import ('./Tabs/TabConsulta/TabConsulta'));
 const TabInscricao = React.lazy(() => import ('./Tabs/TabInscricao/TabInscricao'));
+const TabConsulta = React.lazy(() => import ('./Tabs/TabConsulta/TabConsulta'));
 const TabHacktown = React.lazy(() => import ('./Tabs/TabHacktown/TabHacktown'));
 
 const Inscricoes = (props) => {
