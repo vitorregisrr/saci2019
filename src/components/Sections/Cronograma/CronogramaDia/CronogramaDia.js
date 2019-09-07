@@ -23,7 +23,7 @@ const CronogramaDia = (props) => {
                 </div>
                 <div className="col-9 col-md-8 col-lg-9">
                     <div className="Cronograma__dia__atividades">
-                        {props.atividades
+                        {props.atividades.length > 0
                             ? props
                                 .atividades
                                 .map((atividade, i) => 
