@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './CronogramaItem.scss';
 
 const CronogramaItem = (props) => {

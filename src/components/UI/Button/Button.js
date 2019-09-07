@@ -5,6 +5,7 @@ import './Button.scss';
 const Button = (props) => {
     return (
         <button
+            onClick={props.onClick}
             className={`btn
             ${props.classNames}
             ${props.size ? 'btn-' + props.size : ''}

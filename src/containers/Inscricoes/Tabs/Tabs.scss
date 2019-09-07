@@ -30,6 +30,7 @@
         background-color: rgb(243, 243, 243);
         padding: 35px 40px;
         border-radius: 0 0 10px 10px;
+        min-height: 230px;
 
         @media screen and (max-width: $bp-MD) {
             padding: 25px;

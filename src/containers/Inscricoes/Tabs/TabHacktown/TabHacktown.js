@@ -3,7 +3,7 @@ import {updateFormState} from 'util/updateFormState';
 import ReactWOW from 'react-wow';
 import {CSSTransition} from 'react-transition-group';
 
-import './Tabs.scss';
+import '../Tabs.scss';
 import FormGroup from 'components/UI/Form/FormGroup';
 import Button from 'components/UI/Button/Button';
 
