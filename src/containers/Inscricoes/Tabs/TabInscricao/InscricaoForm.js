@@ -38,17 +38,17 @@ const InscricaoForm = props => {
         <div className="row">
             {props.hasError
                 ? <div className="col-12 text-center">
-                        <label class="color-primary mb-2">
+                        <label className="color-primary mb-2 text-uppercasae">
                             <b>Oops! Ocorreram alguns erros:</b>
                         </label>
                         {Array.isArray(props.fetchErrors)
                             ? props
                                 .fetchErrors
                                 .map(error => <div className="form-group mb-2">
-                                    <label class="color-primary">{error}</label>
+                                    <label className="color-primary">{error}</label>
                                 </div>)
                             : <div className="form-group mb-2">
-                                <label class="color-primary">{props.fetchErrors.message}</label>
+                                <label className="color-primary">{props.fetchErrors.message}</label>
                             </div>}
                     </div>
                 : ''}

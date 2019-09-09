@@ -7,6 +7,7 @@ import Spinner from 'components/UI/Spinner/Spinner';
 import Button from 'components/UI/Button/Button';
 import InscricaoForm from './InscricaoForm';
 import {updateFormState} from 'util/updateFormState';
+import SuccessSignal from 'components/UI/SuccessSignal/SuccessSignal';
 
 const TabInscricao = props => {
 
@@ -19,7 +20,6 @@ const TabInscricao = props => {
                 error: '',
                 touched: false,
                 minLength: 7,
-                isCPF: true
             }
         },
 
@@ -52,7 +52,7 @@ const TabInscricao = props => {
                 isValid: false,
                 error: '',
                 touched: false,
-                minLength: 14
+                isCPF: true
             }
         },
 
@@ -131,13 +131,15 @@ const TabInscricao = props => {
         setIsFetching(true);
         axios.post('/enroll', {
             name: formCtrls.nome.value,
-            cpf: formCtrls.cpf.value,
+            cpf: formCtrls.cpf.value.replace(/[_,.,-]/g, ''),
             email: formCtrls.email.value,
             birthdate: Date.parse(formCtrls.dataNasc.value),
-            institution: formCtrls.instituicao.value
+            institution: formCtrls.instituicao.value.value
+            
         }).then(response => {
+            console.log(response)
             setHasError(false);
-            fetchData(response);
+            setFetchData(response);
         }).catch(error => {
             setHasError(true);
             setFetchError(error);
@@ -150,6 +152,7 @@ const TabInscricao = props => {
         setFetchData(false);
         setFormCtrls(defaultFormCtrls);
     }
+
     return (
         <section className="Inscricoes__tab float">
             <ReactWOW animation="fadeIn">
@@ -165,10 +168,12 @@ const TabInscricao = props => {
                     {isFetching
                         ? <Spinner color="primary" classNames="mt-5"/>
                         : fetchData
-                            ? <div class="success">
+                            ? <div className="success">
+                                    <SuccessSignal></SuccessSignal>
                                     <span className="success__icon"></span>
-                                    <p className="success__caption">
-                                        Eba! Sua inscrição foi realizada com sucesso, aguardamos você no dia do evento.
+                                    <p className="success__caption mt-2">
+                                        Enviamos para você por e-mail, mais informações e um QRCode para realizaçào do credenciamento nos dias do evento.
+                                        Não esqueça-os. Aguardamos você!
                                     </p>
                                     <Button variant="primary" onClick={resetForm}>Realizar outra inscrição</Button>
                                 </div>

@@ -1,4 +1,5 @@
 import validator from 'validator';
+import cpfValidator from './cpfValidator';
 
 export const checkValidity = (newValue, config) => {
     const rules = config.validation;
@@ -31,6 +32,14 @@ export const checkValidity = (newValue, config) => {
             ? ''
             : `Este campo deve ser um e-mail`;
         isValid = isEmail && isValid;
+    }
+
+    if (rules.isCPF) {
+        const isCPF = cpfValidator(newValue.replace(/[_,.,-]/g, '')) && isValid;
+        error = isCPF
+            ? ''
+            : `Este campo deve ser um CPF válido.`;
+        isValid = isCPF && isValid;
     }
 
     return {isValid, error}
