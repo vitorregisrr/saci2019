@@ -119,7 +119,9 @@ const TabHacktown = props => {
     const resetForm = () => {
         setFetchData(false);
         setFormCtrls(defaultFormCtrls);
+        setIsFormValid(false);
     }
+    
     return (
         <section className="Inscricoes__tab float">
             <ReactWOW animation="fadeIn">

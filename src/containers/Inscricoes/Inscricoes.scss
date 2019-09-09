@@ -1,50 +1,62 @@
 @import 'assets/scss/variables/__breakpoints.scss';
 @import 'assets/scss/variables/__colors.scss';
 
-.Inscricoes{
-    padding: 40px 0 60px 0;
+.Inscricoes {
+    padding: 40px 0 60px;
     min-height: calc(100vh - 212px);
     width: 100vw;
     height: 100%;
-    background-image: url(../../assets/images/backgrounds/home-hero.png);
+    background-image: url("../../assets/images/backgrounds/home-hero.png");
     background-position: 90% 15%;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    
-    @media screen and (max-width: $bp-MD){
+    @media screen and (max-width: $bp-MD) {
         min-height: calc(100vh - 182px);
         background-position: center center;
         background-position: 48% -50px;
         background-size: auto 120%;
-        padding: 15px 0 40px 0;
+        padding: 15px 0 40px;
     }
 
-    .success{
+    .success {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        &__title{
-            font-size: 23px;
-            max-width: 300px;
+        &__title {
+            font-size: 17px;
+            max-width: 400px;
             text-align: center;
-            font-weight: 800;
+            font-weight: 700;
             color: $color-primary;
-            margin: 10px 0 10px 0;
+            margin: 10px 0;
         }
 
-        &__caption{
+        &__caption {
             font-size: 14px;
             max-width: 400px;
             text-align: center;
             color: $color-dark;
             font-weight: lighter;
-            margin: 0 0 30px 0;
+            margin: 0 0 20px;
         }
 
-        .btn{
+        .btn {
             margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 20px 0;
+
+            li {
+                font-size: 14px;
+                color: $color-dark;
+
+                span {
+                    font-weight: 500;
+                }
+            }
         }
     }
 }

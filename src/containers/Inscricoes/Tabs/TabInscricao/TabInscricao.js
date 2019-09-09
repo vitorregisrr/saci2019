@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ReactWOW from 'react-wow';
 import axios from 'axios.instance';
+import moment from 'moment';
 
 import '../Tabs.scss';
 import Spinner from 'components/UI/Spinner/Spinner';
@@ -133,11 +134,10 @@ const TabInscricao = props => {
             name: formCtrls.nome.value,
             cpf: formCtrls.cpf.value.replace(/[_,.,-]/g, ''),
             email: formCtrls.email.value,
-            birthdate: Date.parse(formCtrls.dataNasc.value),
+            birthdate: moment(formCtrls.dataNasc.value, 'DD/MM/YYYY').unix(),
             institution: formCtrls.instituicao.value.value
-            
+
         }).then(response => {
-            console.log(response)
             setHasError(false);
             setFetchData(response);
         }).catch(error => {
@@ -151,6 +151,7 @@ const TabInscricao = props => {
     const resetForm = () => {
         setFetchData(false);
         setFormCtrls(defaultFormCtrls);
+        setIsFormValid(false);
     }
 
     return (

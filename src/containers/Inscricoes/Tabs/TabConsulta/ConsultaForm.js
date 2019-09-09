@@ -50,7 +50,7 @@ const ConsultaForm = props => {
                     <Button
                         variant="primary"
                         classNames="w-100"
-                        onClick={() => props.fetchConsulta()}>Me inscreva!</Button>
+                        onClick={() => props.fetchConsulta()}>Procurar inscrição!</Button>
                 </CSSTransition>
             </div>
         </div>

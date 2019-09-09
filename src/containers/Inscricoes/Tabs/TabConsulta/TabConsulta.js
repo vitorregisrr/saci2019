@@ -7,6 +7,7 @@ import Spinner from 'components/UI/Spinner/Spinner';
 import Button from 'components/UI/Button/Button';
 import ConsultaForm from './ConsultaForm';
 import {updateFormState} from 'util/updateFormState';
+import SuccessSignal from 'components/UI/SuccessSignal/SuccessSignal';
 
 const TabConsulta = props => {
 
@@ -18,7 +19,7 @@ const TabConsulta = props => {
                 isValid: false,
                 error: '',
                 touched: false,
-                minLength: 14
+                isCPF: true
             }
         }
     };
@@ -50,17 +51,24 @@ const TabConsulta = props => {
 
     const fetchConsulta = () => {
         setIsFetching(true);
-        axios.get('/check', {
-            cpf: formCtrls.cpf.value
-        }).then(response => {
-            setHasError(false);
-            fetchData(response);
-        }).catch(error => {
-            setHasError(true);
-            setFetchError(error);
-        }). finally(() => {
-            setIsFetching(false);
+        axios
+            .post('/check', {
+            cpf: formCtrls
+                .cpf
+                .value
+                .replace(/[_,.,-]/g, '')
         })
+            .then(response => {
+                setHasError(false);
+                setFetchData(response);
+            })
+            .catch(error => {
+                setHasError(true);
+                setFetchError(error);
+            })
+            . finally(() => {
+                setIsFetching(false);
+            })
     }
 
     const resetForm = () => {
@@ -83,10 +91,16 @@ const TabConsulta = props => {
                     {isFetching
                         ? <Spinner color="primary" classNames="mt-5"/>
                         : fetchData
-                            ? <div class="success">
-                                    <h3 className="success__caption color-success text-bold text-uppercase">
-                                       Inscrição encontrada!
-                                    </h3>
+                            ? <div className="success">
+                                    <SuccessSignal></SuccessSignal>
+                                    <span className="success__icon"></span>
+                                    <ul>
+                                        <li><span>Nome: </span>{fetchData.nome || 'Inválido'}</li>
+                                        <li><span>CPF: </span>{fetchData.cpf || 'Inválido'}</li>
+                                        <li><span>E-mail: </span>{fetchData.email || 'Inválido'}</li>
+                                        <li><span>QRCode: </span>{fetchData.qrcode || 'Inválido'}</li>
+                                    </ul>
+                                    <Button variant="primary" onClick={resetForm}>Realizar outra consulta</Button>
                                 </div>
                             : <ConsultaForm
                                 isFormValid={isFormValid}
@@ -96,7 +110,7 @@ const TabConsulta = props => {
                                 inputChangeHandler={inputChangeHandler}
                                 hasError={hasError}
                                 fetchErrors={fetchError}/>
-                        }   
+}
                 </div>
             </ReactWOW>
         </section>
