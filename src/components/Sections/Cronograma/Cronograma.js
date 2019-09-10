@@ -202,7 +202,7 @@ const Cronograma = (props) => {
                                     'd2fef6a5d2704d1990021c0d3c59bcd&oe=5E0FBBC7'
                         }
                     }, {
-                        titulo: "Desenvolvendo um APP híbrido com React Native (to-do list)",
+                        titulo: 'Desenvolvendo um APP híbrido "Todo List" com React Native/Javascript',
                         horario: {
                             inicio: '10:10',
                             fim: '12:30'
