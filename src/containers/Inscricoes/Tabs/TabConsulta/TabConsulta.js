@@ -60,11 +60,11 @@ const TabConsulta = props => {
         })
             .then(response => {
                 setHasError(false);
-                setFetchData(response);
+                setFetchData(response.data.data);
             })
             .catch(error => {
                 setHasError(true);
-                setFetchError(error);
+                setFetchError(error.response.data.errors);
             })
             . finally(() => {
                 setIsFetching(false);
@@ -74,6 +74,7 @@ const TabConsulta = props => {
     const resetForm = () => {
         setFetchData(false);
         setFormCtrls(defaultFormCtrls);
+        setIsFormValid(false);
     }
 
     return (
@@ -91,14 +92,14 @@ const TabConsulta = props => {
                     {isFetching
                         ? <Spinner color="primary" classNames="mt-5"/>
                         : fetchData
-                            ? <div className="success">
+                            ? <div className="success text-center">
                                     <SuccessSignal></SuccessSignal>
                                     <span className="success__icon"></span>
                                     <ul>
-                                        <li><span>Nome: </span>{fetchData.nome || 'Inválido'}</li>
+                                        <li><span>Nome: </span>{fetchData.name || 'Inválido'}</li>
                                         <li><span>CPF: </span>{fetchData.cpf || 'Inválido'}</li>
                                         <li><span>E-mail: </span>{fetchData.email || 'Inválido'}</li>
-                                        <li><span>QRCode: </span>{fetchData.qrcode || 'Inválido'}</li>
+                                        <li><span className="d-block font-weight-bold mb-2"><b>QRCode: </b></span>{fetchData.qrcode ? <img className="d-block" src={fetchData.qrcode} alt="QRCode para credenciamento"></img> : 'Inválido'}</li>
                                     </ul>
                                     <Button variant="primary" onClick={resetForm}>Realizar outra consulta</Button>
                                 </div>

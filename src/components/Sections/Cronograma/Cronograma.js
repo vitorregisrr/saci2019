@@ -37,12 +37,12 @@ const Cronograma = (props) => {
                         },
                         tipo: 'Palestra',
                         realizador: {
-                            nome: 'Leandro',
-                            cargo: '',
-                            img: maleThumb
+                            nome: 'Leandro Camargo',
+                            cargo: 'IFSul Campus Bagé',
+                            img: 'http://www2.bage.ifsul.edu.br/saads2018/imagens/leandro.jpg'
                         }
                     }, {
-                        titulo: 'Design e UX: Interfaces intuitivas e experência do usuário',
+                        titulo: 'Design UI e UX com Foco em Interfaces Intuitivas e Experiência do Usuário',
                         horario: {
                             inicio: '10:00',
                             fim: '10:50'
@@ -68,9 +68,9 @@ const Cronograma = (props) => {
                         },
                         tipo: 'Oficina',
                         realizador: {
-                            nome: 'Leandro',
-                            cargo: '',
-                            img: maleThumb
+                            nome: 'Leandro Camargo',
+                            cargo: 'IFSul Campus Bagé',
+                            img: 'http://www2.bage.ifsul.edu.br/saads2018/imagens/leandro.jpg'
                         }
                     }, {
                         titulo: 'Práticas no terminal do Linux',
@@ -80,9 +80,9 @@ const Cronograma = (props) => {
                         },
                         tipo: 'Oficina',
                         realizador: {
-                            nome: 'Ricardo',
+                            nome: 'Ricardo Robaina',
                             cargo: '',
-                            img: maleThumb
+                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/52769512_2103288286419279_524944062696914944_n.jpg?_nc_cat=103&_nc_oc=AQnQc1rTdtnaHH4QAJWSBYaHFbYJoGT21GIbfIzthlev5tShV9sccHehtAn8xTA01q8-sbwLuDaMWEl830g2SxG9&_nc_ht=scontent.fbgx1-1.fna&oh=a28ca8ee2b9e251858b04303c6929f30&oe=5E1045BE'
                         }
                     }, {
                         titulo: 'Credenciamento',
@@ -98,9 +98,9 @@ const Cronograma = (props) => {
                         },
                         tipo: 'Palestra',
                         realizador: {
-                            nome: 'Guilherme',
-                            cargo: 'Planetário Unipampa',
-                            img: maleThumb
+                            nome: 'Guilherme Frederico Marranghello',
+                            cargo: 'UNIPAMPA',
+                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/48404313_10157881841854688_360943407968813056_n.jpg?_nc_cat=106&_nc_oc=AQnzAZC77J1AmPLrK4CMOjymZLdDifjuJuklCiJNFH6pE0Zfn9S_1wWlnJd1yFy7bbGRlXE0Rnu8RSKg3owAtfY4&_nc_ht=scontent.fbgx1-1.fna&oh=42e10763897caad00a9114b2492fb0ab&oe=5E0033F6'
                         }
                     }, {
                         titulo: 'Coffee Break',
@@ -132,16 +132,16 @@ const Cronograma = (props) => {
                         tipo: 'Oficina',
                         realizador: {
                             nome: 'Alex Camargo',
-                            cargo: 'Professor no IFSUL',
+                            cargo: 'IFSul Campus Bagé',
                             img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t31.0-8/28947096_2047587505457691_29124' +
                                     '00414426985075_o.jpg?_nc_cat=110&_nc_oc=AQm_H1reMQ51Mj_v9j5VQ52BfepMS_AxpZ8LIW4y' +
                                     'GfpQP5KQL6wOmDvhjp-KfjzbCqA&_nc_ht=scontent.fbgx1-1.fna&oh=b7c2e0130bbbcb723f7cb' +
                                     'c90e51616d1&oe=5E10B065'
                         }
-                    },
+                    }
                 ]
             },
-                // DIA 2 - QUINTA-FEIRA
+            // DIA 2 - QUINTA-FEIRA
             {
                 atividades: [
                     {
@@ -150,19 +150,15 @@ const Cronograma = (props) => {
                             inicio: '07:45',
                             fim: '08:30'
                         }
-                    },{
+                    }, {
                         titulo: 'Em breve',
                         horario: {
                             inicio: '08:40',
                             fim: '09:30'
                         },
                         tipo: 'soon'
-                        // tipo: 'Palestra',
-                        // realizador: {
-                        //     nome: 'Leandro',
-                        //     cargo: '',
-                        //     img: maleThumb
-                        // }
+                        // tipo: 'Palestra', realizador: {     nome: 'Leandro',     cargo: '',     img:
+                        // maleThumb }
                     }, {
                         titulo: 'Coffee Break',
                         horario: {
@@ -170,16 +166,16 @@ const Cronograma = (props) => {
                             fim: '10:10'
                         }
                     }, {
-                        titulo: 'Em breve',
+                        titulo: "Introdução à Pixel Art: do sprite a animation",
                         horario: {
                             inicio: '10:10',
                             fim: '12:30'
                         },
                         tipo: 'Oficina',
                         realizador: {
-                            nome: 'Thiago',
+                            nome: 'Thiago Calcagno',
                             cargo: '',
-                            img: maleThumb
+                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/48994183_1623609214406238_6781827873771618304_n.jpg?_nc_cat=102&_nc_oc=AQk11wiW8RPbax0Fa3B0Vsnlp1F7rnLnVU662zgQ0gfvpmd2O5IGxvkEgl2BaAwBvxIm7b3f0yfLdmcqw4XEGSdr&_nc_ht=scontent.fbgx1-1.fna&oh=ed2fef6a5d2704d1990021c0d3c59bcd&oe=5E0FBBC7'
                         }
                     }, {
                         titulo: 'Credenciamento',
@@ -195,9 +191,9 @@ const Cronograma = (props) => {
                         },
                         tipo: 'Palestra',
                         realizador: {
-                            nome: '',
-                            cargo: 'Professor na Unipampa',
-                            img: maleThumb
+                            nome: 'Ana Paula Lüdtke',
+                            cargo: 'UNIPAMPA',
+                            img: 'https://sites.unipampa.edu.br/guriasdopampanasexatas/files/2019/03/056-300x225.jpg'
                         }
                     }, {
                         titulo: 'Java desde Hello World até api com Quantus',
@@ -226,16 +222,28 @@ const Cronograma = (props) => {
                         tipo: 'Oficina',
                         realizador: {
                             nome: 'Diego Fontoura',
-                            cargo: 'Professor no IFSUL',
-                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/206007_120596644703474_5275811_n.jpg?_nc_cat=100&_nc_oc=AQlFfmeb3Uv2TAftFdTHxJSVV-XfSqekRb3_g4bj2ut7GWDLsbzVCBfQZlslt4hDcBo&_nc_ht=scontent.fbgx1-1.fna&oh=2ed9b00624284e00742e7534d6cc139a&oe=5DFD207A'
+                            cargo: 'IFSul Campus Bagé',
+                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/206007_120596644703474_5275811_n' +
+                                    '.jpg?_nc_cat=100&_nc_oc=AQlFfmeb3Uv2TAftFdTHxJSVV-XfSqekRb3_g4bj2ut7GWDLsbzVCBfQ' +
+                                    'Zlslt4hDcBo&_nc_ht=scontent.fbgx1-1.fna&oh=2ed9b00624284e00742e7534d6cc139a&oe=5' +
+                                    'DFD207A'
+                        }
+                    }, {
+                        titulo: 'Virtualização e máquinas virtuais',
+                        horario: {
+                            inicio: '16:25',
+                            fim: '18:15'
+                        },
+                        tipo: 'Oficina',
+                        realizador: {
+                            nome: 'Anderson Ritta',
+                            cargo: 'IFSul Campus Bagé',
+                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/50011337_486247521900667_5592667990626664448_n.jpg?_nc_cat=110&_nc_oc=AQn5geePcPwHe1OuNCv7Tyz8kydyLgtMeUE0QNM4v2GDi2jhUn0lULWoDIhBzIn9SWhNEZl2jxuGqRxL--KrabXy&_nc_ht=scontent.fbgx1-1.fna&oh=f18f87384b901329a1d8ef27bd8d24c3&oe=5DFEE5C2'
                         }
                     }
                 ]
-            },
-            {
-                atividades: [
-                    
-                ]
+            }, {
+                atividades: []
             }
         ])
     }, []);

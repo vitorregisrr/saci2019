@@ -134,7 +134,7 @@ const TabInscricao = props => {
             name: formCtrls.nome.value,
             cpf: formCtrls.cpf.value.replace(/[_,.,-]/g, ''),
             email: formCtrls.email.value,
-            birthdate: moment(formCtrls.dataNasc.value, 'DD/MM/YYYY').unix(),
+            birthdate: moment(formCtrls.dataNasc.value, 'DD/MM/YYYY').unix() * 1000,
             institution: formCtrls.instituicao.value.value
 
         }).then(response => {
@@ -142,8 +142,8 @@ const TabInscricao = props => {
             setFetchData(response);
         }).catch(error => {
             setHasError(true);
-            setFetchError(error);
-        }). finally(() => {
+            setFetchError(error.response.data.errors);
+        }).finally(() => {
             setIsFetching(false);
         })
     }

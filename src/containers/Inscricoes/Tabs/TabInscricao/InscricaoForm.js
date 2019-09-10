@@ -5,7 +5,6 @@ import FormGroup from 'components/UI/Form/FormGroup';
 import Button from 'components/UI/Button/Button';
 
 const InscricaoForm = props => {
-
     const [instituicoesList] = useState([
         {
             value: 'ifsul-bage',
@@ -37,14 +36,14 @@ const InscricaoForm = props => {
     return (
         <div className="row">
             {props.hasError
-                ? <div className="col-12 text-center">
+                ? <div className="col-12 text-center mb-3">
                         <label className="color-primary mb-2 text-uppercasae">
                             <b>Oops! Ocorreram alguns erros:</b>
                         </label>
                         {Array.isArray(props.fetchErrors)
                             ? props
                                 .fetchErrors
-                                .map(error => <div className="form-group mb-2">
+                                .map(error => <div key={error} className="form-group mb-2">
                                     <label className="color-primary">{error}</label>
                                 </div>)
                             : <div className="form-group mb-2">
