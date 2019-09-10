@@ -25,7 +25,7 @@ const CronogramaItem = (props) => {
                             </h5>
 
                             <h3 className="Cronograma__item__atividade__caption__titulo">
-                                <span class="font-weight-light mr-1 font-weight-lighter">
+                                <span className="font-weight-light mr-1 font-weight-lighter">
                                     Na {props.tipo}:
                                 </span>
                                 <i>

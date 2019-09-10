@@ -4,6 +4,7 @@ import axios from 'axios.instance';
 
 import '../Tabs.scss';
 import Spinner from 'components/UI/Spinner/Spinner';
+import SuccessSignal from 'components/UI/SuccessSignal/SuccessSignal';
 import Button from 'components/UI/Button/Button';
 import HacktownForm from './HacktownForm';
 import {updateFormState} from 'util/updateFormState';
@@ -19,7 +20,6 @@ const TabHacktown = props => {
                 error: '',
                 touched: false,
                 minLength: 3,
-                isCPF: true
             }
         },
 
@@ -30,7 +30,7 @@ const TabHacktown = props => {
                 isValid: false,
                 error: '',
                 touched: false,
-                minLength: 14
+                isCPF: true
             }
         },
 
@@ -41,7 +41,7 @@ const TabHacktown = props => {
                 isValid: false,
                 error: '',
                 touched: false,
-                minLength: 14
+                isCPF: true
             }
         },
 
@@ -52,7 +52,7 @@ const TabHacktown = props => {
                 isValid: false,
                 error: '',
                 touched: false,
-                minLength: 14
+                isCPF: true
             }
         }
     };
@@ -99,18 +99,15 @@ const TabHacktown = props => {
 
     const fetchInscricao = () => {
         setIsFetching(true);
-        axios.post('/enroll', {
+        axios.post('/hackathon', {
             name: formCtrls.nome.value,
-            cpf: formCtrls.cpf.value,
-            email: formCtrls.email.value,
-            birthdate: Date.parse(formCtrls.dataNasc.value),
-            institution: formCtrls.instituicao.value
+            members: [formCtrls.integrante1.value.replace(/[_,.,-]/g, ''), formCtrls.integrante2.value.replace(/[_,.,-]/g, ''), formCtrls.integrante3.value.replace(/[_,.,-]/g, '')]
         }).then(response => {
             setHasError(false);
-            fetchData(response);
+            fetchData(response.data.data);
         }).catch(error => {
             setHasError(true);
-            setFetchError(error);
+            setFetchError(error.response ? error.response.data.errors : 'Algo muito estranho ocorreu. Tente novamente mais tarde!');
         }). finally(() => {
             setIsFetching(false);
         })
@@ -137,13 +134,15 @@ const TabHacktown = props => {
                     {isFetching
                         ? <Spinner color="primary" classNames="mt-5"/>
                         : fetchData
-                            ? <div class="success">
-                                    <span className="success__icon"></span>
-                                    <p className="success__caption">
-                                        Eba! Sua equipe foi realizada com sucesso, aguardamos você no dia do Hacktown.
-                                    </p>
-                                    <Button variant="primary" onClick={resetForm}>Realizar outra inscrição</Button>
-                                </div>
+                            ?  <div className="success">
+                            <SuccessSignal></SuccessSignal>
+                            <span className="success__icon"></span>
+                            <p className="success__caption mt-2">
+                                Sua equipe foi cadastrada com sucesso! Enviamos mais informações para o e-mail do integrante 1.
+                                Aguardamos sua equipe no dia do hackathon!
+                            </p>
+                            <Button variant="primary" onClick={resetForm}>Realizar outra inscrição</Button>
+                        </div>
                             : <HacktownForm
                                 isFormValid={isFormValid}
                                 fetchInscricao={fetchInscricao}

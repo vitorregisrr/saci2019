@@ -45,7 +45,7 @@ const TabOptions = props => {
                             className="Inscricoes__action lg">
                             <h3 className="Inscricoes__action__title">
                                 <span className="ico code"></span>
-                                Inscrições para o Hacktown EducaDev
+                                Inscrições para o Hackathon EducaDev
                             </h3>
 
                             <p className="Inscricoes__action__desc">

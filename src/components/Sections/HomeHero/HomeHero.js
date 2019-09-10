@@ -43,7 +43,7 @@ const HomeHero = (props) => {
                     <ReactWOW animation='fadeInUp'>
                         <div className="HomeHero__shapes__item circle">
                             <h5 className="title">
-                                SACI IFsul Campus Bagé
+                                25, 26, 27 e 28 de nov.
                             </h5>
                             <h4 className="subtitle">
                                 Semana acadêmica do curso Técnico em Informática
