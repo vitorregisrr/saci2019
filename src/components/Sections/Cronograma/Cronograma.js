@@ -130,7 +130,7 @@ const Cronograma = (props) => {
                                     '334bf631d0&oe=5E10E3C5'
                         }
                     }, {
-                        titulo: 'Scraping com Python',
+                        titulo: 'Introdução prática ao web scraping com Python',
                         horario: {
                             inicio: '15:40',
                             fim: '18:15'
@@ -202,7 +202,7 @@ const Cronograma = (props) => {
                                     'd2fef6a5d2704d1990021c0d3c59bcd&oe=5E0FBBC7'
                         }
                     }, {
-                        titulo: 'Desenvolvendo um APP híbrido "Todo List" com React Native/Javascript',
+                        titulo: 'Desenvolvendo um APP híbrido "Todo List" com React Native (Javascript)',
                         horario: {
                             inicio: '10:10',
                             fim: '12:30'
@@ -246,7 +246,7 @@ const Cronograma = (props) => {
                                     'pg'
                         }
                     }, {
-                        titulo: 'Java desde Hello World até api com Quantus',
+                        titulo: 'Iniciando um novo projeto em Java (do hello World a API com Quarkus)',
                         horario: {
                             inicio: '15:10',
                             fim: '15:50'
@@ -254,10 +254,8 @@ const Cronograma = (props) => {
                         tipo: 'Palestra',
                         realizador: {
                             nome: 'Rodrigo Freitas',
-                            cargo: '',
-                            img: 'https://instagram.fbgx1-1.fna.fbcdn.net/vp/98a3a843ccabe21d3e58f9d1a1d0c5f4/5DFD' +
-                                    '4606/t51.2885-19/s150x150/31338738_206008740128587_5319261187290955776_n.jpg?_nc' +
-                                    '_ht=instagram.fbgx1-1.fna.fbcdn.net'
+                            cargo: 'DB1 Global Software e IFSul Campus Bagé',
+                            img: 'https://cdn-images-1.medium.com/max/1200/1*ag_xImRns9IkhXmAaJQjPA.jpeg'
                         }
                     }, {
                         titulo: 'Coffee Break',
