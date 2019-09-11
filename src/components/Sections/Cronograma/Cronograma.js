@@ -81,11 +81,23 @@ const Cronograma = (props) => {
                         tipo: 'Oficina',
                         realizador: {
                             nome: 'Ricardo Robaina',
-                            cargo: '',
+                            cargo: 'Engenheiro de computação',
                             img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/52769512_2103288286419279_524944' +
                                     '062696914944_n.jpg?_nc_cat=103&_nc_oc=AQnQc1rTdtnaHH4QAJWSBYaHFbYJoGT21GIbfIzthl' +
                                     'ev5tShV9sccHehtAn8xTA01q8-sbwLuDaMWEl830g2SxG9&_nc_ht=scontent.fbgx1-1.fna&oh=a2' +
                                     '8ca8ee2b9e251858b04303c6929f30&oe=5E1045BE'
+                        }
+                    }, {
+                        titulo: 'Edição de imagens com GIMP',
+                        horario: {
+                            inicio: '11:15',
+                            fim: '12:30'
+                        },
+                        tipo: 'Oficina',
+                        realizador: {
+                            nome: 'Carolina Barros',
+                            cargo: 'Prof. no IFSul Campus Bagé',
+                            img: 'https://i.ibb.co/qD08jrz/image.png'
                         }
                     }, {
                         titulo: 'Credenciamento',
