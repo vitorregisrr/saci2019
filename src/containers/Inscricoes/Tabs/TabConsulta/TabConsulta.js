@@ -99,7 +99,7 @@ const TabConsulta = props => {
                                         <li><span>Nome: </span>{fetchData.name || 'Inválido'}</li>
                                         <li><span>CPF: </span>{fetchData.cpf || 'Inválido'}</li>
                                         <li><span>E-mail: </span>{fetchData.email || 'Inválido'}</li>
-                                        <li><span className="d-block font-weight-bold mb-2"><b>QRCode: </b></span>{fetchData.qrcode ? <img className="d-block" src={fetchData.qrcode} alt="QRCode para credenciamento"></img> : 'Inválido'}</li>
+                                        <li><span className="d-block font-weight-bold mb-2"><b>QRCode: </b></span>{fetchData.qrcode ? <img className="d-block mx-auto" src={fetchData.qrcode} alt="QRCode para credenciamento"></img> : 'Inválido'}</li>
                                     </ul>
                                     <Button variant="primary" onClick={resetForm}>Realizar outra consulta</Button>
                                 </div>

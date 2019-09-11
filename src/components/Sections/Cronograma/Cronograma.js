@@ -30,7 +30,7 @@ const Cronograma = (props) => {
                             fim: '09:00'
                         }
                     }, {
-                        titulo: 'Computação distrubuida e internet da coisas',
+                        titulo: 'Computação distrubuida e internet das coisas',
                         horario: {
                             inicio: '09:00',
                             fim: '09:50'
@@ -184,14 +184,17 @@ const Cronograma = (props) => {
                             fim: '08:30'
                         }
                     }, {
-                        titulo: 'Em breve',
+                        titulo: 'Contratos Inteligentes: Programação Solidity para Ethereum',
                         horario: {
                             inicio: '08:40',
                             fim: '09:30'
                         },
-                        tipo: 'soon'
-                        // tipo: 'Palestra', realizador: {     nome: 'Leandro',     cargo: '',     img:
-                        // maleThumb }
+                        tipo: 'Palestra',
+                        realizador: {
+                            nome: 'Rodrigo Silva',
+                            cargo: 'Técnologo em Analise e Desenv. de Sist.',
+                            img: 'https://i.ibb.co/qMd9fG3/image.png'
+                        }
                     }, {
                         titulo: 'Coffee Break',
                         horario: {
@@ -223,8 +226,7 @@ const Cronograma = (props) => {
                         realizador: {
                             nome: 'Vitor Régis',
                             cargo: '',
-                            img: 'https://media.licdn.com/dms/image/C4E03AQF2HLgmIRt9YQ/profile-displayphoto-shrin' +
-                                    'k_200_200/0?e=1573689600&v=beta&t=3BHb5-ZYWSlFokA5w1B5O5jeWkLzX1DuuvFOUIs38Yo'
+                            img: 'https://i.ibb.co/zrMk1Jf/image.png'
                         }
                     }, {
                         titulo: "Em breve",
