@@ -157,7 +157,7 @@ const Cronograma = (props) => {
                                     'c90e51616d1&oe=5E10B065'
                         }
                     }, {
-                        titulo: 'Em breve',
+                        titulo: 'Construa uma API em PHP com Laravel em pouco tempo!',
                         horario: {
                             inicio: '15:40',
                             fim: '18:15'
@@ -217,19 +217,22 @@ const Cronograma = (props) => {
                                     'd2fef6a5d2704d1990021c0d3c59bcd&oe=5E0FBBC7'
                         }
                     }, {
-                        titulo: 'Desenvolvendo um APP híbrido "Todo List" com React Native (Javascript)',
+                        titulo: 'Virtualização e máquinas virtuais',
                         horario: {
                             inicio: '10:10',
                             fim: '12:30'
                         },
                         tipo: 'Oficina',
                         realizador: {
-                            nome: 'Vitor Régis',
-                            cargo: '',
-                            img: 'https://i.ibb.co/zrMk1Jf/image.png'
+                            nome: 'Anderson Ritta',
+                            cargo: 'Prof. no IFSul Campus Bagé',
+                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/50011337_486247521900667_5592667' +
+                                    '990626664448_n.jpg?_nc_cat=110&_nc_oc=AQn5geePcPwHe1OuNCv7Tyz8kydyLgtMeUE0QNM4v2' +
+                                    'GDi2jhUn0lULWoDIhBzIn9SWhNEZl2jxuGqRxL--KrabXy&_nc_ht=scontent.fbgx1-1.fna&oh=f1' +
+                                    '8f87384b901329a1d8ef27bd8d24c3&oe=5DFEE5C2'
                         }
                     }, {
-                        titulo: "Em breve",
+                        titulo: "Jogos 2D",
                         horario: {
                             inicio: '10:10',
                             fim: '12:30'
@@ -293,19 +296,31 @@ const Cronograma = (props) => {
                                     'DFD207A'
                         }
                     }, {
-                        titulo: 'Virtualização e máquinas virtuais',
+                        titulo: 'Modelagem 3D',
                         horario: {
                             inicio: '16:25',
                             fim: '18:15'
                         },
                         tipo: 'Oficina',
                         realizador: {
-                            nome: 'Anderson Ritta',
+                            nome: 'Daniel Castilho',
+                            cargo: 'Ilustrador',
+                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/41469749_2150380641850313_909396' +
+                                    '9886316593152_n.jpg?_nc_cat=102&_nc_oc=AQlb_J99SsKbrOH1_wGCwLE3r9RMqWxEqFq4aG6jD' +
+                                    'K-3tpTrBG1m_7sKPquBMlQTjyQ&_nc_ht=scontent.fbgx1-1.fna&oh=bdfbf5373caae958a3a9f2' +
+                                    'a00cce7339&oe=5DF5C4AE'
+                        }
+                    }, {
+                        titulo: 'Introdução ao Node.js',
+                        horario: {
+                            inicio: '16:25',
+                            fim: '18:15'
+                        },
+                        tipo: 'Oficina',
+                        realizador: {
+                            nome: 'Diego Porcellis',
                             cargo: 'Prof. no IFSul Campus Bagé',
-                            img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-9/50011337_486247521900667_5592667' +
-                                    '990626664448_n.jpg?_nc_cat=110&_nc_oc=AQn5geePcPwHe1OuNCv7Tyz8kydyLgtMeUE0QNM4v2' +
-                                    'GDi2jhUn0lULWoDIhBzIn9SWhNEZl2jxuGqRxL--KrabXy&_nc_ht=scontent.fbgx1-1.fna&oh=f1' +
-                                    '8f87384b901329a1d8ef27bd8d24c3&oe=5DFEE5C2'
+                            img: maleThumb
                         }
                     }
                 ]
