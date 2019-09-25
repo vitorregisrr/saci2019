@@ -1,0 +1,329 @@
+[33mcommit b0d213034a381fcc9e2fcea0ec0b8ddb92ae6515[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Mon Sep 23 14:02:57 2019 -0300
+
+    Change cronograma data
+
+[33mcommit 32741969ddcee5cc801869294171ed6a4bcd73fb[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Sep 14 15:36:22 2019 -0300
+
+    Remove footer z-index top
+
+[33mcommit dfde774cc714a27421629097d85dc9a6c78d9a62[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Sep 12 20:47:19 2019 -0300
+
+    Update cronograma
+
+[33mcommit 5eca672dcb2b63e5702f33002508bc04116e4985[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Sep 11 11:03:12 2019 -0300
+
+    Add ScrollTop Button
+
+[33mcommit 9398ddf1a850900d3af3a467ccf44809e139d805[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Sep 11 10:37:07 2019 -0300
+
+    Improve Cronograma data
+
+[33mcommit ed925ba4ae397c0f26ad5d4c751f6a257ff08249[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Sep 11 00:10:13 2019 -0300
+
+    Misc improves on Cronograma and HomeHero
+
+[33mcommit 6262d5a366ada16a4154a505a173bade24c90e98[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Sep 11 00:03:24 2019 -0300
+
+    Misc improves on Cronograma and HomeHero
+
+[33mcommit 29712d54947b46bf0798d6cd2373b559a99e0ea7[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Sep 10 15:16:33 2019 -0300
+
+    Improve Cronograma data
+
+[33mcommit 9680f77f4a45f46d3027241c66a4205897dbe142[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Sep 10 15:11:40 2019 -0300
+
+    Improve Cronograma data, Misc inscricoes improvments
+
+[33mcommit 079b084efc2f2a57761441ebd76a4594ec297c8a[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Sep 10 00:26:10 2019 -0300
+
+    Improve cronograma data, Improve inscricoes error handling
+
+[33mcommit b2c99c52a36640812c068ab2c1ff181bbaf689f5[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Mon Sep 9 15:37:09 2019 -0300
+
+    Fix inscricao birthdate parsing to timestamp
+
+[33mcommit e75e6464596820e49b9b5c29cf60ecb00479b574[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Mon Sep 9 14:59:48 2019 -0300
+
+    Add SuccessSignal animated icon, Improve TabInscricao result content, Add cpf-validator util function and using in checkValidty
+
+[33mcommit ace9151965717c0c15386c2b5c01a3a28f68a7fb[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Sep 7 16:34:23 2019 -0300
+
+    Improve CronogramaItem responsive styling
+
+[33mcommit 404a13a8c2c0f71a8c1ef395b69f790fe65fc049[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Sep 7 16:25:20 2019 -0300
+
+    Update cronograma
+
+[33mcommit fbaeb306d6d9e843e65a1ff857020e34a2e2f776[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Sep 7 15:14:06 2019 -0300
+
+    Improve all Inscricao tabs, with refactoring and add fetch to APP
+
+[33mcommit 1dd1a0ba5897536472bd646de5ad1f6491a493bf[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Sep 7 12:25:11 2019 -0300
+
+    Refacture inscricaoTab structure, Add fetch logic
+
+[33mcommit c1d6b75edc33eae003d07b1f240429cc266c8600[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Aug 31 23:53:43 2019 -0300
+
+    Improve Cronograma styling
+
+[33mcommit 05879c50f33b8a7d8e7b688da47ed46bd2119e30[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Aug 31 23:50:50 2019 -0300
+
+    Improve Cronograma styling
+
+[33mcommit b415bb68e7aefff97536422c78d197954459dd91[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Aug 31 23:29:34 2019 -0300
+
+    Add CronogramaItem styling
+
+[33mcommit 2e5116be6fb612f2dc25a05d27b71eadc91a67b0[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Fri Aug 30 15:56:52 2019 -0300
+
+    Misc improves at FormGroup and Inscricoes
+
+[33mcommit e81e0bd2cbd6d5ba4ea91f797748d40b0dfe2f38[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Fri Aug 30 15:38:52 2019 -0300
+
+    Improve inscricao forms
+
+[33mcommit 2240b5e098e3af53060b60dae24799c09ff07fa0[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Fri Aug 30 14:52:44 2019 -0300
+
+    Add controls to hacktown signup tab, Improve styling
+
+[33mcommit 508a421814b785d94fc6b3deba0431a3614dd09d[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Fri Aug 30 14:27:04 2019 -0300
+
+    Improve FormGroup logics, Add react-select component option to forms, Add custom styling for react-select, Misc styling and logics improvments
+
+[33mcommit 9c73dfbfcb690699242c7ea89b3365bd801bb1c7[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 29 14:17:41 2019 -0300
+
+    Set spinner fullscren height to 100vh
+
+[33mcommit 299cb66e60feb3178fc6d24ddca6f996f6d916fc[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 29 14:08:08 2019 -0300
+
+    Improve styling and logic of components:  Modal, FormGroup, Spinner, Footer, Navbar. Add button basic structure. Misc container improvments. Move inputChangeHandler to a util reusable function.
+
+[33mcommit dd99ab897efb230fc68b669e699a92be556549ed[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Aug 28 08:44:34 2019 -0300
+
+    Fix CronogramaItem error
+
+[33mcommit 90a510caea1038162063f07cf8faa5c6bffc3323[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Aug 28 08:42:19 2019 -0300
+
+    Improve navbar inscricoes button active styling, Improve Inscricoes tabs
+
+[33mcommit 87f342fc069440acc0f527c4d57024b3b0212edd[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 27 14:27:30 2019 -0300
+
+    Add and improve Inscricoes tabs, Misc improve
+
+[33mcommit 15ac3ea98da7a50ba8e2a0952136423e5e300f69[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Mon Aug 26 14:30:07 2019 -0300
+
+    Remove cronograma route, Misc styling improves
+
+[33mcommit 1fa0945b79af36a398376a5a2519f92118b67c57[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 14:22:59 2019 -0300
+
+    Improve Patrons spacing
+
+[33mcommit 5cb73b6a878e3583fc1edea12db5a324d31224e9[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 14:21:44 2019 -0300
+
+    Change home colors to red
+
+[33mcommit 0531f7181005206c47969bafda3a3cfff7d9db0d[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 14:20:43 2019 -0300
+
+    Remove some Patrons
+
+[33mcommit f1354801e3d1bcbd8467a0cef8067b6dd354d513[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 14:19:36 2019 -0300
+
+    Small fixies
+
+[33mcommit f8c12f2338d79c74e05ebd7de0ec785182dd6889[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 14:09:27 2019 -0300
+
+    Change home shapes color to pink
+
+[33mcommit 18ff27c2fc8c4f517ae328ff7d2502e849f3f0e1[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 12:18:18 2019 -0300
+
+    Misc fixies
+
+[33mcommit 30249ac4195892d285f1df5f75db800b4bb77657[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 12:14:19 2019 -0300
+
+    Misc improves
+
+[33mcommit 744fc37f17984b35d2f15531d0657b75daf791e0[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 12:08:32 2019 -0300
+
+    Improve Patrons responsive mode
+
+[33mcommit 52d3c2d18ffdff42e921b90b3d4c45f3cadae780[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 12:06:58 2019 -0300
+
+    Improve Patrons responsive mode
+
+[33mcommit 24663ac8585164de557b3a44cf7fd5e03e388b6e[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Thu Aug 22 12:01:00 2019 -0300
+
+    Add cronograma content (missing activities item), Add Patrons, Improve Navbar, Add line divisor to About, Misc improves
+
+[33mcommit 1b28c8065d43e4b59ee4b08cc0eb96e78e527a80[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Aug 21 15:04:12 2019 -0300
+
+    Misc improve
+
+[33mcommit 5e1f50ed84bff650ae5591da316b0e823421e8a2[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Wed Aug 21 10:43:02 2019 -0300
+
+    Improve Navbar (add dinamic scroll/links according to actual route), Add CronogramaHeader and improve Conograma structure
+
+[33mcommit 258c11bab141ae299d526cf3bb9e376046b3cb18[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 22:33:45 2019 -0300
+
+    Improve About section, Add footer component, Misc improves
+
+[33mcommit 718f6a3d466950b54ac4a5e36179eea78e5da91b[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 21:33:26 2019 -0300
+
+    Remove homehero loading spinner
+
+[33mcommit 6168654e2520881916b6b82963c6bce5d6472e24[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 21:31:28 2019 -0300
+
+    Start About, Improve HomeHero loading
+
+[33mcommit e3b1a634eebe65ce298ab5044d3623509cf52699[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 21:03:13 2019 -0300
+
+    Fix main HomeHero title to middle
+
+[33mcommit 55f83d3745fdd87098c01c38948151f238de3f61[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 21:01:01 2019 -0300
+
+    Improve Spinner
+
+[33mcommit d30424e06c8a4b0958b15044d28609d725bb4c74[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 19:57:25 2019 -0300
+
+    Improve index tags, Misc improves
+
+[33mcommit 3a23758384393a176a30b90db2fd18adec9b88cb[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 19:44:01 2019 -0300
+
+    Misc improves
+
+[33mcommit 41852e054440672c55b13de9cac22d7c53217c7b[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 19:28:52 2019 -0300
+
+    Improve home hero title position
+
+[33mcommit 1a2f9a0a20d9ca4f0cf81957f73e9814092f98b6[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Tue Aug 20 19:28:00 2019 -0300
+
+    Add content do HomeHero circle
+
+[33mcommit 4037064f12ec57810fcde33352c87a7257414544[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Mon Aug 19 21:49:09 2019 -0300
+
+    Remove yarn
+
+[33mcommit 2190127b57996be68095217788e2a4f92705c5c3[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Mon Aug 19 21:44:59 2019 -0300
+
+    Add HomeHero in progress, Add Navbar and routes working, Improve structure
+
+[33mcommit 212dfa1c18041fb0cede798e39837ed2afb804f5[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sun Aug 18 21:16:52 2019 -0300
+
+    Eject enviroment, Fix base components and containers semantic
+
+[33mcommit 837c6721d0366f137fcb05da5c30683baccdaba5[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sun Aug 18 19:18:23 2019 -0300
+
+    First commit before eject
+
+[33mcommit deb9abf6cd4b4a2b6dcf8b9d708a75eba861b743[m
+Author: vitorregisr <vitorregisrr@gmail.com>
+Date:   Sat Aug 17 15:20:53 2019 -0300
+
+    Initial commit from Create React App

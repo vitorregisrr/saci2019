@@ -320,12 +320,45 @@ const Cronograma = (props) => {
                         realizador: {
                             nome: 'Diego Porcellis',
                             cargo: 'Prof. no IFSul Campus Bagé',
-                            img: maleThumb
+                            img: 'https://i1.rgstatic.net/ii/profile.image/631362511986688-1527539961466_Q128/Diego_Porcellis.jpg'
                         }
                     }
                 ]
             }, {
-                atividades: []
+                atividades: [{
+                    titulo: 'Jogos de mesa',
+                    horario: {
+                        inicio: '08:00',
+                        fim: '12:30'
+                    },
+                },
+                {
+                    titulo: 'Uso de Lego para o ensino de fisíca',
+                    horario: {
+                        inicio: '13:30',
+                        fim: '15:30'
+                    },
+                    tipo: 'Oficina',
+                    realizador: {
+                        nome: 'Wesley Martter Lucas',
+                        img: 'https://scontent.fbgx1-1.fna.fbcdn.net/v/t1.0-1/29314518_1972321493019717_2307851872792215552_n.jpg?_nc_cat=108&_nc_oc=AQmN4QGabuHsvOBAaKum5bmw-jhdN4SBXHbqdtAo-P-Z2ZR_wnuJD_wCQNWOrFfzwY9DObEFlMkbyD7gYjwUWsl_&_nc_ht=scontent.fbgx1-1.fna&oh=3c4064db9d6fd1712801fd3871cd377f&oe=5E3396A1'
+                    }
+                },
+                {
+                    titulo: 'Jogos Eletrônicos',
+                    horario: {
+                        inicio: '13:30',
+                        fim: '15:30'
+                    },
+                },
+                {
+                    titulo: 'Início do Hackathon',
+                    horario: {
+                        inicio: '17:00',
+                        fim: '28/09 16:00'
+                    },
+                },
+            ]
             }
         ])
     }, []);
