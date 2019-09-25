@@ -328,7 +328,7 @@ const Cronograma = (props) => {
                 atividades: [{
                     titulo: 'Jogos de mesa',
                     horario: {
-                        inicio: '08:00',
+                        inicio: '09:00',
                         fim: '12:30'
                     },
                 },
@@ -352,7 +352,7 @@ const Cronograma = (props) => {
                     },
                 },
                 {
-                    titulo: 'Início do Hackathon',
+                    titulo: 'Hackathon',
                     horario: {
                         inicio: '17:00',
                         fim: '28/09 16:00'
