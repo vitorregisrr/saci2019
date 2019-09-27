@@ -325,7 +325,15 @@ const Cronograma = (props) => {
                     }
                 ]
             }, {
-                atividades: [{
+                atividades: [
+                    
+                    {
+                        titulo: 'Credenciamento',
+                        horario: {
+                            inicio: '07:45',
+                            fim: '08:30'
+                        }
+                    },  {
                     titulo: 'Jogos de mesa',
                     horario: {
                         inicio: '09:00',
